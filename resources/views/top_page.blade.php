@@ -19,17 +19,29 @@
                 width: 100vw;
                 background-color: rgb(251, 212, 219);
             }
+            nav li{
+                list-style: none;
+                margin-left: 2%;
+            }
+            
+            nav ul{
+                width: 100%;
+            }
         </style>
     </head>
     <body>
+        <nav class="navbar navbar-light" style="background-color: #e3f2fd;">
+            <ul class="d-flex justify-content-end">
+                <li><a href="">TOP</a></li>
+                <li><a href="">About Us</a></li>
+                <li><a href="">メニュー</a></li>
+                <li><a href="">予約する</a></li>
+                <li><a href="">お問い合わせ</a></li>
+            </ul>
+        </nav>
         <div class="justify-content-center d-flex align-items-center">
             <div class="title m-b-md font-italic font-weight-lighter text-primary">
-            <h1><a href="">Welcome to our {{ $restaurant_name }}</a></h1>
-                {{-- <ul>
-                    @foreach ($list as $item)
-                    <li>{{ $item->detail }}</li>
-                    @endforeach
-                </ul> --}}
+            <h1><a href="">Welcome to our restaurant</a></h1>
         </div>
         </div>
     </body>
