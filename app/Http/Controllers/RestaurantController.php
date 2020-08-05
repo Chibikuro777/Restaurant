@@ -18,7 +18,7 @@ class RestaurantController extends Controller
 
     public function show()
     {
-        return view('welcome');
+        return view('about_us');
     }
 
     public function menu()

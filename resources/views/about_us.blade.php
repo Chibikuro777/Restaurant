@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>enquery</title>
+    <title>ようこそ　レストラン名</title>
+
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
         <link rel="stylesheet" href="">
         <title>Restaurant Name</title>
@@ -36,7 +37,8 @@
           </nav>
 
           <div class="container">
-            <h1 class="mt-5 mb-4 title-color">Enquiry</h1>
+            <h1 class="mt-5 mb-4 title-color">Introduction about Hoque's Restaurant</h1>
+            <p>私たちのレストランについて。</p>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas doloribus quam aliquid aut, quos sint veniam animi distinctio quis vitae dolores obcaecati architecto error ut, porro exercitationem? Quasi, atque dicta.
             Porro, incidunt quam dolores, eveniet ipsam minus nostrum nesciunt aliquid quibusdam consequuntur sint facere, veritatis labore modi. Doloribus ipsam repellat asperiores error voluptatum ipsa, quaerat sequi perferendis cumque, deserunt quas!
             Voluptatibus illum odio fuga eius provident placeat optio aspernatur obcaecati est saepe, similique quas dignissimos corrupti, nostrum voluptates, nesciunt sit perferendis tenetur repellendus autem laboriosam! Ipsam obcaecati quod sit voluptatem!

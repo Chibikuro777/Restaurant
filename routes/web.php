@@ -17,9 +17,13 @@ Route::get('/', function () {
     return view('top_page');
 });
 
-Route::get('/aboutUs', 'RestaurantController@show')->name('restaurant.welcome');
+Route::get('/aboutUs', 'RestaurantController@show')->name('restaurant.about_us');
 Route::get('/menu', 'RestaurantController@menu')->name('restaurant.menu');
 Route::get('/booking', 'RestaurantController@booking')->name('restaurant.booking');
 Route::get('/enquiry', 'RestaurantController@enquiry')->name('restaurant.enquiry');
 
 
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
