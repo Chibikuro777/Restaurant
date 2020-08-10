@@ -12,8 +12,7 @@
     </head>
     <body>
         <nav class="navbar navbar-dark bg-dark navbar-expand-lg">
-            <a class="navbar-brand" href="./">Hoque's restaurant</a>
-            </button>
+        <a class="navbar-brand" href="./">Hoque's restaurant</a>
             <div class="collapse navbar-collapse" id="navbarText">
                 <ul class="navbar-nav mr-auto d-flex justify-content-end">
                 <li class="nav-item active">

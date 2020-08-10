@@ -37,25 +37,27 @@
 
           <div class="container">
             <h1 class="mt-5 mb-4 title-color">Booking Page</h1>
-
-            <table>
-                <tbody>
-                    <tr>
-                        <th colspan="7" class="cellTableHead">2020年8月</th>
-                    </tr>
-                    <tr>
-                        <th class="cellSunday">日</th>
-                        <th>月</th>
-                        <th>火</th>
-                        <th>水</th>
-                        <th>木</th>
-                        <th>金</th>
-                        <th class="cellSaturday">土</th>
-                    </tr>
-                    <tr>
-                        <td class=""></td>
-                    </tr>
-                </tbody>
+            
+            <caption>
+              <a href="?ym={{ $prev }}">&lt;</a>
+              <span class="month">{{ $month }}</span>
+              <a href="?ym={{ $next }}">&gt;</a>
+            </caption>
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th scope="col" class="text-danger">日</th>
+                  <th scope="col">月</th>
+                  <th scope="col">火</th>
+                  <th scope="col">水</th>
+                  <th scope="col">木</th>
+                  <th scope="col">金</th>
+                  <th scope="col" class="text-danger">土</th>
+                </tr>
+              </thead>
+                @foreach ($weeks ?? '' as $week)
+                  <a href="">{!! $week !!}</a>
+                @endforeach
             </table>
         </div>
 </body>

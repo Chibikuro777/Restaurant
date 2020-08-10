@@ -22,8 +22,5 @@ Route::get('/menu', 'RestaurantController@menu')->name('restaurant.menu');
 Route::get('/booking', 'RestaurantController@booking')->name('restaurant.booking');
 Route::get('/enquiry', 'RestaurantController@enquiry')->name('restaurant.enquiry');
 
-
-
-Auth::routes();
-
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/booking', 'CalendarController@index')->name('restaurant.booking');

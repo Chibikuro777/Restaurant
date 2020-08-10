@@ -11,7 +11,7 @@ class RestaurantController extends Controller
     // {
     //     $restaurant = new restaurant;
     //     $list = $restaurant->get_restaurant();
-        
+
     //     return view('top_page',
     //      ]);
     // }
