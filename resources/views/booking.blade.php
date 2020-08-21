@@ -37,7 +37,6 @@
 
           <div class="container">
             <h1 class="mt-5 mb-4 title-color">Booking Page</h1>
-            
             <caption>
               <a href="?ym={{ $prev }}">&lt;</a>
                 <span class="month">{{ $month }}</span>
@@ -58,7 +57,6 @@
                 @foreach ($weeks as $week)
                   {!! $week !!}
                 @endforeach
-                
             </table>
 
             <div class="booking-status">

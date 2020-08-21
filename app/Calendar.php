@@ -2,8 +2,10 @@
 
 namespace App;
 
+use Illuminate\Support\Facades\DB;
 use Illuminate\Database\Eloquent\Model;
 use Carbon\Carbon;
+
 
 date_default_timezone_set('Asia/Tokyo');
 
@@ -24,11 +26,11 @@ class Calendar extends Model
         for ($day = 1; $day <= $days_in_month; $day++, $day_of_week++) {
             $date = self::getYm() . '-' . $day;
             if (Carbon::now()->format('Y-m-j') === $date) {
-                $week .= '<td class="today">' . $day;
+                $week .= '<td class="today">' . $day . '<a href="./BookingInput"><div class="d-flex justify-content-center align-middle"><span> ○';
             } else {
-                $week .= '<td>' . $day;
+                $week .= '<td>' . $day . '<a href="./BookingInput"><div class="d-flex justify-content-center align-middle"><span> ○';
             }
-            $week .= '</td>';
+            $week .= '</span></div></td></a>';
 
             // 週の終わり、または月末
             if (($day_of_week % 7 === 6) || ($day === $days_in_month)) {

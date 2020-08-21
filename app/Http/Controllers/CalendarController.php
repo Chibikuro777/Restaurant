@@ -17,4 +17,9 @@ class CalendarController extends Controller
             'next'          => Calendar::getNext(),
         ]);
     }
+
+    public function booking_input()
+    {
+        return view('booking_input');
+    }
 }
