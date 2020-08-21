@@ -15,7 +15,7 @@
         <a class="navbar-brand" href="./">Hoque's restaurant</a>
             <div class="collapse navbar-collapse" id="navbarText">
                 <ul class="navbar-nav mr-auto d-flex justify-content-end">
-                <li class="nav-item active">
+                  <li class="nav-item active">
                   <a class="nav-link" href="./">TOP</a>
                 </li>
                 <li class="nav-item">
@@ -28,7 +28,7 @@
                     <a class="nav-link" href="./booking">予約する</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="./enquiry">お問い合わせ</a>
+                    <a class="nav-link" href="./contact">お問い合わせ</a>
                   </li>
               </ul>
             </div>
@@ -46,6 +46,11 @@
             Magnam pariatur asperiores ad hic voluptatibus exercitationem repudiandae quas dolore, debitis cupiditate quaerat. Qui veritatis, dolorem blanditiis corrupti placeat quod in a aperiam nam eum maxime ipsa quas neque consequuntur?
             Reprehenderit harum optio voluptatem, fuga magnam alias. Ullam, beatae amet? Laborum beatae consequuntur consectetur officiis qui quis nostrum possimus placeat, mollitia sit dolorum molestiae laudantium voluptatibus nisi dicta. Nostrum, suscipit.
             Dolor placeat ipsum, facere debitis repellendus aliquid, consectetur perspiciatis mollitia fugit iste iusto autem eaque deleniti error velit. Earum, praesentium sint voluptatum quibusdam aperiam sit. Laudantium rerum molestias consectetur quasi.</p>
+            
+            <aside class="easy-contact">
+              <p>TEL: ○○○-○○○○-○○○○</p>
+              <p>営業時間: ○○:○○~○○:○○</p>
+            </aside>
         </div>
 
 </body>

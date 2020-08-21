@@ -29,14 +29,14 @@
                     <a class="nav-link" href="./booking">予約する</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="./enquiry">お問い合わせ</a>
+                    <a class="nav-link" href="./contact">お問い合わせ</a>
                   </li>
               </ul>
             </div>
           </nav>
         <div class="justify-content-center d-flex align-items-center">
             <div class="title m-b-md font-italic font-weight-lighter text-primary">
-            <h1><a href="./aboutUs">Welcome to Our Restaurant</a></h1>
+            <h1><a href="./aboutUs" id="home-title">Welcome to Our Restaurant</a></h1>
         </div>
         </div>
     </div>

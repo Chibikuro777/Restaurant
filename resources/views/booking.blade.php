@@ -29,7 +29,7 @@
                     <a class="nav-link" href="./booking">予約する</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="./enquiry">お問い合わせ</a>
+                    <a class="nav-link" href="./contact">お問い合わせ</a>
                   </li>
               </ul>
             </div>
@@ -40,7 +40,7 @@
             
             <caption>
               <a href="?ym={{ $prev }}">&lt;</a>
-              <span class="month">{{ $month }}</span>
+                <span class="month">{{ $month }}</span>
               <a href="?ym={{ $next }}">&gt;</a>
             </caption>
             <table class="table table-striped">
@@ -55,10 +55,20 @@
                   <th scope="col" class="text-danger">土</th>
                 </tr>
               </thead>
-                @foreach ($weeks ?? '' as $week)
-                  <a href="">{!! $week !!}</a>
+                @foreach ($weeks as $week)
+                  {!! $week !!}
                 @endforeach
+                
             </table>
-        </div>
+
+            <div class="booking-status">
+              <p>※予約状況○△×</p>
+            </div>
+
+            <aside class="easy-contact">
+              <p>TEL: ○○○-○○○○-○○○○</p>
+              <p>営業時間: ○○:○○~○○:○○</p>
+            </aside>
+          </div>
 </body>
 </html>

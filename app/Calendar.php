@@ -19,23 +19,23 @@ class Calendar extends Model
         $days_in_month = $dt->daysInMonth; // その月の日数
 
         // 第 1 週目に空のセルを追加
-        $week .= str_repeat('<a><td></td></a>', $day_of_week);
+        $week .= str_repeat('<td></td>', $day_of_week);
 
         for ($day = 1; $day <= $days_in_month; $day++, $day_of_week++) {
             $date = self::getYm() . '-' . $day;
             if (Carbon::now()->format('Y-m-j') === $date) {
                 $week .= '<td class="today">' . $day;
             } else {
-                $week .= '<a><td>' . $day;
+                $week .= '<td>' . $day;
             }
-            $week .= '</td></a>';
+            $week .= '</td>';
 
             // 週の終わり、または月末
             if (($day_of_week % 7 === 6) || ($day === $days_in_month)) {
                 if ($day === $days_in_month) {
-                    $week .= str_repeat('<a><td></td></a>', 6 - ($day_of_week % 7));
+                    $week .= str_repeat('<td></td>', 6 - ($day_of_week % 7));
                 }
-                $weeks[] = '<a href=""><tr>' . $week . '</tr></a>';
+                $weeks[] = '<tr>' . $week . '</tr>';
                 $week = '';
             }
         }
@@ -94,4 +94,12 @@ class Calendar extends Model
     {
         return self::getYm() . '-01';
     }
+
+    // 予約状況を定義
+    // public static function booking_condition()
+    // {
+    //     if(){
+
+    //     }
+    // }
 }

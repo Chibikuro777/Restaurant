@@ -7,15 +7,6 @@ use Illuminate\Http\Request;
 
 class RestaurantController extends Controller
 {
-    // public function index()
-    // {
-    //     $restaurant = new restaurant;
-    //     $list = $restaurant->get_restaurant();
-
-    //     return view('top_page',
-    //      ]);
-    // }
-
     public function show()
     {
         return view('about_us');
@@ -31,8 +22,8 @@ class RestaurantController extends Controller
         return view('booking');
     }
 
-    public function enquiry()
+    public function contact()
     {
-        return view('enquiry');
+        return view('contact');
     }
 }

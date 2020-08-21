@@ -18,7 +18,7 @@ class CreateBookingsTable extends Migration
             $table->timestamps();
             $table->string('booking_name');
             $table->integer('booking_number');
-            $table->integer('booking_date');
+            $table->string('booking_date');
         });
     }
 

@@ -10913,7 +10913,8 @@ a.text-dark:focus {
 .body-container {
   height: 100vh;
   width: 100vw;
-  background-color: #fbd4db;
+  background-image: url(/images/IMG_0938_ok.jpg?54d44d63b414c17bb991785931279068);
+  background-size: cover;
 }
 
 nav li {
@@ -10935,5 +10936,26 @@ nav ul {
 
 table {
   width: 100%;
+}
+
+.booking-status {
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  height: 100vh;
+}
+
+.easy-contact {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  bottom: 0;
+}
+
+#home-title {
+  font-size: 80px;
+  color: beige;
 }
 
