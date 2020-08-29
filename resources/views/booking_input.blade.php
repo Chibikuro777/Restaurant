@@ -9,7 +9,7 @@
 
         <link href="{{ asset('css/app.css') }}" rel="stylesheet">
         <link rel="stylesheet" href="">
-        <title>Booking Page</title>
+    <title>{{ config('app.name') }}</title>
 
     </head>
 <body>
@@ -50,9 +50,9 @@
                   </div>
                   <div class="form-group col">
                     <label for="">People:</label>
-                      <select name="people_number" id="" class="form-control">
+                      <select name="people" id="" class="form-control">
                         <option value="1">1</option>
-                        <option value="2">2</option>
+                        <option value="2" selected>2</option>
                         <option value="3">3</option>
                         <option value="4">4</option>
                         <option value="5">5</option>
@@ -88,7 +88,7 @@
                       <label for="">Tel#:</label><input type="text" name="tel" class="form-control" placeholder="01 23 45 67 89"><br>
                     </div>
                     <div class="col">
-                      <label for="">Email:</label><input type="email" class="form-control" ame="email" placeholder="email.address@example.fr">
+                      <label for="">Email:</label><input type="email" class="form-control" name="email" placeholder="email.address@example.fr">
                     </div>
                   </div>
                     Comments:<textarea name="comments" id="" class="form-control" rows="5"></textarea><br>

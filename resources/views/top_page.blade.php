@@ -6,7 +6,7 @@
 
         <link href="{{ asset('css/app.css') }}" rel="stylesheet">
         <link rel="stylesheet" href="">
-        <title>Restaurant Name</title>
+        <title>{{ config('app.name') }}</title>
 
     </head>
     <body>

@@ -4,18 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>enquery</title>
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-        <link rel="stylesheet" href="">
-        <title>Restaurant Name</title>
-
-    </head>
+    <link rel="stylesheet" href="">
+    <title>{{ config('app.name') }}</title>
+</head>
     <body>
         <nav class="navbar navbar-dark bg-dark navbar-expand-lg">
             <a class="navbar-brand" href="./">Hoque's restaurant</a>
-            </button>
             <div class="collapse navbar-collapse" id="navbarText">
-                <ul class="navbar-nav mr-auto d-flex justify-content-end">
+              <ul class="navbar-nav mr-auto d-flex justify-content-end">
                 <li class="nav-item active">
                   <a class="nav-link" href="./">TOP</a>
                 </li>
@@ -27,10 +24,10 @@
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="./booking">予約する</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="./contact">お問い合わせ</a>
-                  </li>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./contact">お問い合わせ</a>
+                </li>
               </ul>
             </div>
           </nav>
@@ -52,6 +49,6 @@
               <p>TEL: ○○○-○○○○-○○○○</p>
               <p>営業時間: ○○:○○~○○:○○</p>
             </aside>
-        </div>
-</body>
+          </div>
+    </body>
 </html>

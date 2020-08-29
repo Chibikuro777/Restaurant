@@ -26,9 +26,9 @@ class Calendar extends Model
         for ($day = 1; $day <= $days_in_month; $day++, $day_of_week++) {
             $date = self::getYm() . '-' . $day;
             if (Carbon::now()->format('Y-m-j') === $date) {
-                $week .= '<td class="today">' . $day . '<a href="./BookingInput"><div class="d-flex justify-content-center align-middle"><span> ○';
+                $week .= '<td class="today">' . $day . '<a href="./bookingInput"><div class="d-flex justify-content-center align-middle"><span> ○';
             } else {
-                $week .= '<td>' . $day . '<a href="./BookingInput"><div class="d-flex justify-content-center align-middle"><span> ○';
+                $week .= '<td>' . $day . '<a href="./bookingInput"><div class="d-flex justify-content-center align-middle"><span> ○';
             }
             $week .= '</span></div></td></a>';
 

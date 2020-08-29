@@ -6,7 +6,7 @@
 
         <link href="{{ asset('css/app.css') }}" rel="stylesheet">
         <link rel="stylesheet" href="">
-        <title>Booking Confirm Page</title>
+        <title>{{ config('app.name') }}</title>
 
     </head>
 <body>
@@ -46,7 +46,8 @@
                     <label for="">Time:</label><input type="time" value="19:00" name="time" class="form-control"><br>
                   </div>
                   <div class="form-group col">
-                    <label for="">People:</label>
+                    <label for="">
+                        People:</label>
                       <select name="people_number" id="" class="form-control">
                         <option value="1">1</option>
                         <option value="2">2</option>
