@@ -21,13 +21,13 @@
                   <a class="nav-link" href="./aboutUs">About Us</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="./menu">メニュー</a>
+                  <a class="nav-link" href="./menu">Menu</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="./booking">予約する</a>
+                    <a class="nav-link" href="./booking">Book</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="./contact">お問い合わせ</a>
+                    <a class="nav-link" href="./contact">Contact</a>
                   </li>
               </ul>
             </div>
@@ -37,61 +37,41 @@
             <h1 class="mt-5 mb-4 title-color">Booking Confirmation Page</h1>
             
             <form action="" method="POST">
+              @csrf
               <div class="form-group">
                 <div class="form-row">
                   <div class="form-group col">
-                    <label for="">Date:</label><input type="text" name="date" class="form-control" value="{{Carbon::now()->format('d/m/Y')}}">
+                    <label for="date">Date:</label>
                   </div>
                   <div class="form-group col">
-                    <label for="">Time:</label><input type="time" value="19:00" name="time" class="form-control"><br>
+                    <label for="time">Time:</label>
                   </div>
                   <div class="form-group col">
-                    <label for="">
-                        People:</label>
-                      <select name="people_number" id="" class="form-control">
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                        <option value="6">6</option>
-                        <option value="7">7</option>
-                        <option value="8">8</option>
-                        <option value="9">9</option>
-                        <option value="10">10</option>
-                        <option value="11">11</option>
-                        <option value="12">12</option>
-                        <option value="13">13</option>
-                        <option value="14">14</option>
-                        <option value="15">15</option>
-                        <option value="16">16</option>
-                        <option value="17">17</option>
-                        <option value="18">18</option>
-                        <option value="19">19</option>
-                        <option value="20">20</option>
-                        <option value="Larger party">Larger party</option>
-                      </select><br>
+                    <label for="people">People:</label>
+                      
                   </div>
                 </div>
                 <div class="row">
                   <div class="col">
-                <label for="">First Name:</label><input type="text" name="first_name" class="form-control" placeholder="First Name"><br>
+                <label for="first_name">First Name:</label>
                   </div>
                   <div class="col">
-                <label for="">Last Name:</label><input type="text" name="last_name" class="form-control" Placeholder="Last Name"><br>
+                <label for="last_name">Last Name:</label>
                   </div>
                 </div>
                   <div class="row">
                     <div class="col">
-                      <label for="">Tel#:</label><input type="text" name="tel" class="form-control" placeholder="01 23 45 67 89"><br>
+                      <label for="">Tel#:</label>
                     </div>
                     <div class="col">
-                      <label for="">Email:</label><input type="email" class="form-control" ame="email" placeholder="email.address@example.fr">
+                      <label for="">Email:</label>
                     </div>
                   </div>
-                    Comments:<textarea name="comments" id="" class="form-control" rows="5"></textarea><br>
+                    Comments:
+                  <div class="row">
                     <div class="d-flex justify-content-center col">
-                      <button type="submit" name="submit" class="btn btn-primary mt-4">Submit</button>
+                      <button type="submit" name="submit" class="btn btn-primary mt-3 mr-5 col-3" value="back">Return</button>
+                      <button type="submit" name="submit" class="btn btn-primary mt-3 col-3" value="submit">Submit</button>
                     </div>
                 </div>
             </form>

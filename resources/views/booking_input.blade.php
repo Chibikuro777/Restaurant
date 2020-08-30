@@ -24,13 +24,13 @@
                   <a class="nav-link" href="./aboutUs">About Us</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="./menu">メニュー</a>
+                  <a class="nav-link" href="./menu">Menu</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="./booking">予約する</a>
+                    <a class="nav-link" href="./booking">Book</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="./contact">お問い合わせ</a>
+                    <a class="nav-link" href="./contact">Contact</a>
                   </li>
               </ul>
             </div>
@@ -38,18 +38,18 @@
 
           <div class="container">
             <h1 class="mt-5 mb-4 title-color">Booking Page</h1>
-            
-            <form action="" method="POST">
+            <form action="" method="POST" class="needs-validation">
+              @csrf
               <div class="form-group">
                 <div class="form-row">
                   <div class="form-group col">
-                    <label for="">Date:</label><input type="text" name="date" class="form-control" value="{{Carbon::now()->format('d/m/Y')}}">
+                    <label for="date">Date:</label><input type="text" name="date" class="form-control" value="{{Carbon::now()->format('d/m/Y')}}">
                   </div>
                   <div class="form-group col">
-                    <label for="">Time:</label><input type="time" value="19:00" name="time" class="form-control"><br>
+                    <label for="time">Time:</label><input type="time" value="19:00" name="time" class="form-control"><br>
                   </div>
                   <div class="form-group col">
-                    <label for="">People:</label>
+                    <label for="people">People:</label>
                       <select name="people" id="" class="form-control">
                         <option value="1">1</option>
                         <option value="2" selected>2</option>
@@ -77,25 +77,37 @@
                 </div>
                 <div class="row">
                   <div class="col">
-                <label for="">First Name:</label><input type="text" name="first_name" class="form-control" placeholder="First Name"><br>
+                <label for="first_name">First Name:</label><input type="text" name="first_name" class="form-control @error('first_name') is-invalid @enderror" placeholder="First Name">
+                  @error('first_name')
+                    <div class="invalid-feedback">{{ $message }}</div>
+                  @enderror
                   </div>
                   <div class="col">
-                <label for="">Last Name:</label><input type="text" name="last_name" class="form-control" Placeholder="Last Name"><br>
+                <label for="last_name">Last Name:</label><input type="text" name="last_name" class="form-control @error('last_name') is-invalid @enderror" Placeholder="Last Name">
+                  @error('last_name')
+                    <div class="invalid-feedback">{{ $message }}</div>
+                  @enderror
                   </div>
                 </div>
                   <div class="row">
                     <div class="col">
-                      <label for="">Tel#:</label><input type="text" name="tel" class="form-control" placeholder="01 23 45 67 89"><br>
+                      <label for="">Tel#:</label><input type="text" name="tel" class="form-control @error('tel') is-invalid @enderror" placeholder="01 23 45 67 89">
+                      @error('tel')
+                        <div class="invalid-feedback">{{ $message }}</div>
+                      @enderror
                     </div>
                     <div class="col">
-                      <label for="">Email:</label><input type="email" class="form-control" name="email" placeholder="email.address@example.fr">
+                      <label for="">Email:</label><input type="email" class="form-control @error('email') is-invalid @enderror" name="email" placeholder="email.address@example.fr">
+                    @error('email')
+                      <div class="invalid-feedback">{{ $message }}</div>
+                    @enderror
                     </div>
                   </div>
-                    Comments:<textarea name="comments" id="" class="form-control" rows="5"></textarea><br>
+                    Comments:<textarea name="comments" class="form-control" rows="5"></textarea><br>
                   <div class="row">
                     <div class="col d-flex justify-content-center">
-                      <button type="submit" name="return" class="btn btn-primary mt-3 mr-5 col-3">Return</button>
-                      <button type="submit" name="submit" class="btn btn-primary mt-3 col-3">Submit</button>
+                      <button type="submit" name="return" class="btn btn-primary mt-3 mr-5 col-3" value="back">Return</button>
+                      <button type="submit" name="submit" class="btn btn-primary mt-3 col-3" value="confirm">Confirm</button>
                     </div>
                 </div>
             </form>

@@ -22,13 +22,13 @@
                   <a class="nav-link" href="./aboutUs">About Us</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="./menu">メニュー</a>
+                  <a class="nav-link" href="./menu">Menu</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="./booking">予約する</a>
+                    <a class="nav-link" href="./booking">Book</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="./contact">お問い合わせ</a>
+                    <a class="nav-link" href="./contact">Contact</a>
                   </li>
               </ul>
             </div>
