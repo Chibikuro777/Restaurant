@@ -36,41 +36,41 @@
           <div class="container">
             <h1 class="mt-5 mb-4 title-color">Booking Confirmation Page</h1>
             
-            <form action="" method="POST">
+          <form action="" method="POST">
               @csrf
               <div class="form-group">
                 <div class="form-row">
                   <div class="form-group col">
-                    <label for="date">Date:</label>
+                    <label for="date" class="mr-5">Date:</label>{{ old('date') }}
                   </div>
                   <div class="form-group col">
-                    <label for="time">Time:</label>
+                    <label for="time" class="mr-5">Time:</label>{{ old('time') }}
                   </div>
                   <div class="form-group col">
-                    <label for="people">People:</label>
+                    <label for="people" class="mr-5">People:</label>{{ old('people') }}
                       
                   </div>
                 </div>
                 <div class="row">
                   <div class="col">
-                <label for="first_name">First Name:</label>
+                <label for="first_name" class="mr-5">First Name:</label>{{ old('first_name') }}
                   </div>
                   <div class="col">
-                <label for="last_name">Last Name:</label>
+                <label for="last_name" class="mr-5">Last Name:</label>{{ old('last_name') }}
                   </div>
                 </div>
                   <div class="row">
                     <div class="col">
-                      <label for="">Tel#:</label>
+                      <label for="tel" class="mr-5">Tel#:</label>{{ old('tel') }}
                     </div>
                     <div class="col">
-                      <label for="">Email:</label>
+                      <label for="email" class="mr-5">Email:</label>{{ old('email') }}
                     </div>
                   </div>
                     Comments:
                   <div class="row">
                     <div class="d-flex justify-content-center col">
-                      <button type="submit" name="submit" class="btn btn-primary mt-3 mr-5 col-3" value="back">Return</button>
+                      <button type="submit" name="return" class="btn btn-primary mt-3 mr-5 col-3" value="return">Return</button>
                       <button type="submit" name="submit" class="btn btn-primary mt-3 col-3" value="submit">Submit</button>
                     </div>
                 </div>

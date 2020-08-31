@@ -38,7 +38,7 @@
 
           <div class="container">
             <h1 class="mt-5 mb-4 title-color">Booking Page</h1>
-            <form action="" method="POST" class="needs-validation">
+          <form action="{{ route('restaurant.booking_confirm') }}" method="POST" class="needs-validation">
               @csrf
               <div class="form-group">
                 <div class="form-row">
@@ -77,13 +77,13 @@
                 </div>
                 <div class="row">
                   <div class="col">
-                <label for="first_name">First Name:</label><input type="text" name="first_name" class="form-control @error('first_name') is-invalid @enderror" placeholder="First Name">
+                  <label for="first_name">First Name:</label><input type="text" name="first_name" class="form-control @error('first_name') is-invalid @enderror" value="{{ old('first_name') }}" placeholder="First Name">
                   @error('first_name')
                     <div class="invalid-feedback">{{ $message }}</div>
                   @enderror
                   </div>
                   <div class="col">
-                <label for="last_name">Last Name:</label><input type="text" name="last_name" class="form-control @error('last_name') is-invalid @enderror" Placeholder="Last Name">
+                <label for="last_name">Last Name:</label><input type="text" name="last_name" class="form-control @error('last_name') is-invalid @enderror" value="{{ old('last_name') }}" Placeholder="Last Name">
                   @error('last_name')
                     <div class="invalid-feedback">{{ $message }}</div>
                   @enderror
