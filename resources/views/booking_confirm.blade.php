@@ -36,41 +36,41 @@
           <div class="container">
             <h1 class="mt-5 mb-4 title-color">Booking Confirmation Page</h1>
             
-          <form action="" method="POST">
+          <form action="{{ route('restaurant.booking_thanks') }}" method="POST">
               @csrf
               <div class="form-group">
                 <div class="form-row">
                   <div class="form-group col">
-                    <label for="date" class="mr-5">Date:</label>{{ old('date') }}
+                    <label for="date" class="mr-5">Date:</label>{{ $input['date'] }}
                   </div>
                   <div class="form-group col">
-                    <label for="time" class="mr-5">Time:</label>{{ old('time') }}
+                    <label for="time" class="mr-5">Time:</label>{{ $input['time'] }}
                   </div>
                   <div class="form-group col">
-                    <label for="people" class="mr-5">People:</label>{{ old('people') }}
+                    <label for="people" class="mr-5">People:</label>{{ $input['people'] }}
                       
                   </div>
                 </div>
                 <div class="row">
                   <div class="col">
-                <label for="first_name" class="mr-5">First Name:</label>{{ old('first_name') }}
+                <label for="first_name" class="mr-5">First Name:</label>{{ $input['first_name'] }}
                   </div>
                   <div class="col">
-                <label for="last_name" class="mr-5">Last Name:</label>{{ old('last_name') }}
+                <label for="last_name" class="mr-5">Last Name:</label>{{ $input['first_name'] }}
                   </div>
                 </div>
                   <div class="row">
                     <div class="col">
-                      <label for="tel" class="mr-5">Tel#:</label>{{ old('tel') }}
+                      <label for="tel" class="mr-5">Tel#:</label>{{ $input['first_name'] }}
                     </div>
                     <div class="col">
-                      <label for="email" class="mr-5">Email:</label>{{ old('email') }}
+                      <label for="email" class="mr-5">Email:</label>{{ $input['first_name'] }}
                     </div>
                   </div>
                     Comments:
                   <div class="row">
                     <div class="d-flex justify-content-center col">
-                      <button type="submit" name="return" class="btn btn-primary mt-3 mr-5 col-3" value="return">Return</button>
+                      <button type="submit" name="submit" class="btn btn-primary mt-3 mr-5 col-3" value="return">Return</button>
                       <button type="submit" name="submit" class="btn btn-primary mt-3 col-3" value="submit">Submit</button>
                     </div>
                 </div>

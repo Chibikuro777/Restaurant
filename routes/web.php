@@ -26,5 +26,6 @@ Route::get('/booking', 'CalendarController@index')->name('restaurant.booking');
 Route::get('/bookingInput', 'CalendarController@booking_input');
 Route::get('/bookingInput', 'BookingInputController@index');
 
-Route::post('/bookingInput', 'BookingInputController@post')->name('restaurant.booking_confirm');
-// Route::post('/bookingInput', 'BookingInputController@send')->name('restaurant.booking_thanks');
+
+Route::post('/bookingConfirm', 'BookingInputController@post')->name('restaurant.booking_confirm');
+Route::post('/bookingThanks', 'BookingInputController@send')->name('restaurant.booking_thanks');

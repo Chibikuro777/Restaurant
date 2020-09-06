@@ -83,7 +83,7 @@
                   @enderror
                   </div>
                   <div class="col">
-                <label for="last_name">Last Name:</label><input type="text" name="last_name" class="form-control @error('last_name') is-invalid @enderror" value="{{ old('last_name') }}" Placeholder="Last Name">
+                <label for="last_name">Last Name:</label><input type="text" name="last_name" class="form-control @error('last_name') is-invalid @enderror" value="" Placeholder="Last Name">
                   @error('last_name')
                     <div class="invalid-feedback">{{ $message }}</div>
                   @enderror
