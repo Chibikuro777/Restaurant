@@ -7,9 +7,10 @@ use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 
-class Email extends Mailable
+class Mail extends Mailable
 {
     use Queueable, SerializesModels;
+
 
     /**
      * Create a new message instance.
@@ -28,6 +29,8 @@ class Email extends Mailable
      */
     public function build()
     {
-        return $this->view('view.name');
+        return $this->view('emails.email')
+            ->from('test@example.com')
+            ->subject('This is a test email');
     }
 }

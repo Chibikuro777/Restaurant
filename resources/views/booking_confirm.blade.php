@@ -56,18 +56,18 @@
                 <label for="first_name" class="mr-5">First Name:</label>{{ $input['first_name'] }}
                   </div>
                   <div class="col">
-                <label for="last_name" class="mr-5">Last Name:</label>{{ $input['first_name'] }}
+                <label for="last_name" class="mr-5">Last Name:</label>{{ $input['last_name'] }}
                   </div>
                 </div>
                   <div class="row">
                     <div class="col">
-                      <label for="tel" class="mr-5">Tel#:</label>{{ $input['first_name'] }}
+                      <label for="tel" class="mr-5">Tel#:</label>{{ $input['tel'] }}
                     </div>
                     <div class="col">
-                      <label for="email" class="mr-5">Email:</label>{{ $input['first_name'] }}
+                      <label for="email" class="mr-5">Email:</label>{{ $input['email'] }}
                     </div>
                   </div>
-                    Comments:
+                    <span class="mr-5">Comments:</span>{{ $input['comments'] }}
                   <div class="row">
                     <div class="d-flex justify-content-center col">
                       <button type="submit" name="submit" class="btn btn-primary mt-3 mr-5 col-3" value="return">Return</button>
