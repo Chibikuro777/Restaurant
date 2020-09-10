@@ -13,14 +13,11 @@ class BookingInputController extends Controller
 
     public function post(Request $request)
     {
-        $request->flash(); //sessionに$requestデータをいれる
         $input = $request->all(); //$requestデータ全てを$inputへ代入
 
         //入力画面の戻るボタン押下でbookingページに遷移
         if ($request->input('return') === 'back') {
             return redirect('booking');
-        } elseif ($request->input('submit') === 'return') { //確認画面の戻るボタン押下でbookingInputに遷移
-            return view('booking_input');
         }
 
         $rules = [
@@ -35,19 +32,31 @@ class BookingInputController extends Controller
         ];
 
         $this->validate($request, $rules);
+        $request->flash(); //sessionに$requestデータをいれる
 
-        //入力画面で確認ボタン押下でbooking_confirmに遷移
         if ($request->input('submit') === 'confirm') {
-            return view('booking_confirm', compact('input')); //データ保持したまま
-        }
+            return view('booking_confirm')->withInput($input);
+        } //確認画面で戻るボタン押下でbooking_inputに遷移
+
+
     }
 
     public function send(Request $request)
     {
-        if ($request->input('submit') === 'submit') { //送信ボタン押下で、送信画面に遷移
+        $action = $request->get('action', 'back');
+        $input = $request->except('action');
+
+        $request->flash(); //sessionに$requestデータをいれる
+
+        if ($action === 'submit') {
             return view('booking_thanks');
-        } elseif ($request->input('submit') === 'return') { //確認画面の戻るボタン押下でbookingInputに遷移
-            return view('booking_input');
+        } else {
+            return redirect()->action('BookingInputController@back')->withInput($input); //データ保持したまま
         }
+    }
+
+    public function back()
+    {
+        return view('booking_input');
     }
 }

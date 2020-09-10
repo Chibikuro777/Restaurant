@@ -9,8 +9,8 @@ use App\Mail\Email;
 
 class EmailSendController extends Controller
 {
-    public function send()
-    {
-        Mail::to('sanae.kawasaka@gmail.com')->send(new Mail());
-    }
+    // public function send()
+    // {
+    //     // Mail::to('sanae.kawasaka@gmail.com')->send(new Mail());
+    // }
 }

@@ -27,10 +27,10 @@ class Mail extends Mailable
      *
      * @return $this
      */
-    public function build()
-    {
-        return $this->view('emails.email')
-            ->from('test@example.com')
-            ->subject('This is a test email');
-    }
+    // public function build()
+    // {
+    //     return $this->view('emails.email')
+    //         ->from('test@example.com')
+    //         ->subject('This is a test email');
+    // }
 }

@@ -17,7 +17,7 @@ Route::get('/', function () {
     return view('top_page');
 });
 
-Route::get('/mail', 'EmailSendController@send');
+// Route::get('/mail', 'EmailSendController@send');
 
 Route::get('/aboutUs', 'RestaurantController@show')->name('restaurant.about_us');
 Route::get('/menu', 'RestaurantController@menu')->name('restaurant.menu');
@@ -28,6 +28,6 @@ Route::get('/booking', 'CalendarController@index')->name('restaurant.booking');
 Route::get('/bookingInput', 'CalendarController@booking_input');
 Route::get('/bookingInput', 'BookingInputController@index');
 
-
 Route::post('/bookingConfirm', 'BookingInputController@post')->name('restaurant.booking_confirm');
+Route::post('/bookingInput', 'BookingInputController@back');
 Route::post('/bookingThanks', 'BookingInputController@send')->name('restaurant.booking_thanks');
