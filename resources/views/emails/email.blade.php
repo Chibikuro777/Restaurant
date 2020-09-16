@@ -34,7 +34,7 @@
   Booking confirmation email has been sent to your input email address.
 </p>
 <p>
-  {{$text}}
+  Tnanks for your booking!
 </p>
 <p id="button">
   <a href="https://www.google.co.jp">test</a>

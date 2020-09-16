@@ -1,5 +1,6 @@
 <?php
   use Carbon\Carbon;
+
 ?>
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
@@ -78,6 +79,7 @@
                 <div class="row">
                   <div class="col">
                   <label for="first_name">First Name:</label><input type="text" name="first_name" class="form-control @error('first_name') is-invalid @enderror" value="{{ old('first_name') }}" placeholder="First Name">
+                  {{-- <?php dd(old('first_name'))?> --}}
                   @error('first_name')
                     <div class="invalid-feedback">{{ $message }}</div>
                   @enderror

@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Mail\Email;
+use Mail;
 
 class BookingInputController extends Controller
 {
@@ -32,26 +34,23 @@ class BookingInputController extends Controller
         ];
 
         $this->validate($request, $rules);
-        $request->flash(); //sessionに$requestデータをいれる
 
         if ($request->input('submit') === 'confirm') {
-            return view('booking_confirm')->withInput($input);
-        } //確認画面で戻るボタン押下でbooking_inputに遷移
+            $request->flash(); //sessionに$requestデータをいれる
 
-
+            return view('booking_confirm', compact('input'));
+        }
     }
 
     public function send(Request $request)
     {
-        $action = $request->get('action', 'back');
-        $input = $request->except('action');
-
-        $request->flash(); //sessionに$requestデータをいれる
+        $action = $request->input('action', 'back');
 
         if ($action === 'submit') {
-            return view('booking_thanks');
+            Mail::to($request->input('email'))->send(new Email());
+            return view('emails.email');
         } else {
-            return redirect()->action('BookingInputController@back')->withInput($input); //データ保持したまま
+            return redirect()->action('BookingInputController@back')->withInput(); //データ保持したまま確認画面で戻るボタン押下でbooking_inputに遷移
         }
     }
 

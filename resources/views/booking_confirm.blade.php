@@ -70,7 +70,7 @@
                     <span class="mr-5">Comments:</span>{{ $input['comments'] }}
                   <div class="row">
                     <div class="d-flex justify-content-center col">
-                      <button type="submit" name="actoin" class="btn btn-primary mt-3 mr-5 col-3" value="return">Return</button>
+                      <button type="submit" name="action" class="btn btn-primary mt-3 mr-5 col-3" value="return">Return</button>
                       <button type="submit" name="action" class="btn btn-primary mt-3 col-3" value="submit">Submit</button>
                     </div>
                 </div>
