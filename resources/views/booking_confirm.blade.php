@@ -42,32 +42,40 @@
                 <div class="form-row">
                   <div class="form-group col">
                     <label for="date" class="mr-5">Date:</label>{{ $input['date'] }}
+                    <input type="hidden" name="date" class="form-control" value="{{ old('date', $input['date'])}}">
                   </div>
                   <div class="form-group col">
                     <label for="time" class="mr-5">Time:</label>{{ $input['time'] }}
+                    <input type="hidden" name="time" class="form-control" value="{{ old('time', $input['time'])}}">
                   </div>
                   <div class="form-group col">
                     <label for="people" class="mr-5">People:</label>{{ $input['people'] }}
+                    <input type="hidden" name="people" class="form-control" value="{{ old('people', $input['people'])}}">
                       
                   </div>
                 </div>
                 <div class="row">
                   <div class="col">
                 <label for="first_name" class="mr-5">First Name:</label>{{ $input['first_name'] }}
+                <input type="hidden" name="first_name" class="form-control" value="{{ old('first_name', $input['first_name'])}}">
                   </div>
                   <div class="col">
                 <label for="last_name" class="mr-5">Last Name:</label>{{ $input['last_name'] }}
+                <input type="hidden" name="last_name" class="form-control" value="{{ old('last_name', $input['last_name'])}}">
                   </div>
                 </div>
                   <div class="row">
                     <div class="col">
                       <label for="tel" class="mr-5">Tel#:</label>{{ $input['tel'] }}
+                      <input type="hidden" name="tel" class="form-control" value="{{ old('tel', $input['tel'])}}">
                     </div>
                     <div class="col">
                       <label for="email" class="mr-5">Email:</label>{{ $input['email'] }}
+                      <input type="hidden" name="email" class="form-control" value="{{ old('email', $input['email'])}}">
                     </div>
                   </div>
                     <span class="mr-5">Comments:</span>{{ $input['comments'] }}
+                    <input type="hidden" name="comments" class="form-control" value="{{ old('comments', $input['comments'])}}">
                   <div class="row">
                     <div class="d-flex justify-content-center col">
                       <button type="submit" name="action" class="btn btn-primary mt-3 mr-5 col-3" value="return">Return</button>
