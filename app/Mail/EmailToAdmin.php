@@ -6,12 +6,10 @@ use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
-use Illuminate\Http\Request;
 
-class Email extends Mailable
+class EmailToAdmin extends Mailable
 {
     use Queueable, SerializesModels;
-
 
     /**
      * Create a new message instance.
@@ -33,9 +31,9 @@ class Email extends Mailable
         $first_name = $this->input['first_name'];
         $last_name  = $this->input['last_name'];
 
-        return $this->view('emails.email')
+        return $this->view('emails.email_to_admin')
             ->from('test@example.com')
-            ->subject('This is a test email')
+            ->subject('You have a new booking!')
             ->with([
                 'first_name' => $first_name,
                 'last_name'  => $last_name,
