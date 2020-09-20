@@ -52,7 +52,7 @@ class BookingInputController extends Controller
         if ($action === 'submit') {
             Mail::to($request->input('email'))->send(new Email($input));
             Mail::to($admin)->send(new EmailToAdmin($input));
-            return view('emails.email');
+            return view('booking_thanks');
         } else {
             return redirect()->action('BookingInputController@back')->withInput(); //データ保持したまま確認画面で戻るボタン押下でbooking_inputに遷移
         }
@@ -62,4 +62,14 @@ class BookingInputController extends Controller
     {
         return view('booking_input');
     }
+
+    // public function store(Request $request)
+    // {
+    //     //モデルクラスのインスタンス化
+    //     $booking = new \App\Booking;
+
+    //     $booking->date = $request->date;
+
+    //     $booking->save();
+    // }
 }
