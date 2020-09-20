@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Mail\Email;
 use App\Mail\EmailToAdmin;
 use Mail;
+use DB;
 
 class BookingInputController extends Controller
 {
@@ -39,6 +40,20 @@ class BookingInputController extends Controller
         if ($request->input('submit') === 'confirm') {
             $request->flash(); //sessionに$requestデータをいれる
 
+            DB::table('bookings')->insert(
+                [
+                    'created_at'       => now(),
+                    'date'             => $request->input('date'),
+                    'time'             => $request->input('time'),
+                    'people'           => $request->input('people'),
+                    'first_name'       => $request->input('first_name'),
+                    'last_name'        => $request->input('last_name'),
+                    'tel'              => $request->input('tel'),
+                    'email'            => $request->input('email'),
+                    'comments'         => $request->input('comments'),
+                ]
+            );
+
             return view('booking_confirm', compact('input'));
         }
     }
@@ -62,14 +77,4 @@ class BookingInputController extends Controller
     {
         return view('booking_input');
     }
-
-    // public function store(Request $request)
-    // {
-    //     //モデルクラスのインスタンス化
-    //     $booking = new \App\Booking;
-
-    //     $booking->date = $request->date;
-
-    //     $booking->save();
-    // }
 }

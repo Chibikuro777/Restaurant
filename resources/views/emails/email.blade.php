@@ -10,7 +10,7 @@
 <p>
   Tnanks for your booking!
 </p>
-<p>{{ $date }}</p>
+    <p>{{ $date }}</p>
     <p>{{ $time }}</p>
     <p>{{ $people }}</p>
     <p>{{ $first_name }}</p>
