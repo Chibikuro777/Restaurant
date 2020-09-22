@@ -10963,3 +10963,51 @@ table {
   background-color: grey;
 }
 
+.email-container{
+    width: 70%;
+    margin:0 auto;
+    margin-top: 10px;
+}
+
+.email-header{
+    height: 100px;
+    margin-bottom: 10px;
+    background-color: lightgrey;
+}
+
+.email-header .p{
+    padding: 10px;
+}
+
+.email-restaurant-img{
+    height: 100px;
+    width:100px;
+    padding: 10px;
+}
+
+.email-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.email-aside{
+    background-color: lightblue;
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 10px;
+}
+
+.email-social-logo, .email-contact-info{
+    display: flex;
+    flex-direction: column;
+}
+
+.email-footer{
+    display: flex;
+    justify-content: center;
+}
+
+.email-social-logo li{
+    list-style: none;
+}

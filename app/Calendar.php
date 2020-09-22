@@ -26,16 +26,16 @@ class Calendar extends Model
         for ($day = 1; $day <= $days_in_month; $day++, $day_of_week++) {
             $date = self::getYm() . '-' . $day;
             if (Carbon::now()->format('Y-m-j') === $date) {
-                $week .= '<td class="today">' . $day . '<a href="./bookingInput"><div class="d-flex justify-content-center align-middle"><span> ○';
+                $week .= '<td class="today booking">' . $day . '<a href="./bookingInput"><div class="d-flex justify-content-center align-middle"><span> Choose';
             } else {
-                $week .= '<td>' . $day . '<a href="./bookingInput"><div class="d-flex justify-content-center align-middle"><span> ○';
+                $week .= '<td class="booking">' . $day . '<a href="./bookingInput"><div class="d-flex justify-content-center align-middle"><span> Choose';
             }
-            $week .= '</span></div></td></a>';
+            $week .= '</span></div></></td>';
 
             // 週の終わり、または月末
             if (($day_of_week % 7 === 6) || ($day === $days_in_month)) {
                 if ($day === $days_in_month) {
-                    $week .= str_repeat('<td></td>', 6 - ($day_of_week % 7));
+                    $week .= str_repeat('<td class="booking"></td>', 6 - ($day_of_week % 7));
                 }
                 $weeks[] = '<tr>' . $week . '</tr>';
                 $week = '';
@@ -96,12 +96,4 @@ class Calendar extends Model
     {
         return self::getYm() . '-01';
     }
-
-    // 予約状況を定義
-    // public static function booking_condition()
-    // {
-    //     if(){
-
-    //     }
-    // }
 }

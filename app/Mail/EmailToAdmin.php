@@ -35,7 +35,7 @@ class EmailToAdmin extends Mailable
         $last_name  = $this->input['last_name'];
         $tel        = $this->input['tel'];
         $email      = $this->input['email'];
-        $comments   = $this->input['comments'];
+        $comment   = $this->input['comment'];
 
         return $this->view('emails.email_to_admin')
             ->from('test@example.com')
@@ -48,7 +48,7 @@ class EmailToAdmin extends Mailable
                 'last_name'  => $last_name,
                 'tel'        => $tel,
                 'email'      => $email,
-                'comments'   => $comments,
+                'comment'   => $comment,
             ]);
     }
 }

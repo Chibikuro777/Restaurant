@@ -14,6 +14,6 @@ class Booking extends Model
         'last_name',
         'tel',
         'email',
-        'comments',
+        'comment',
     ];
 }

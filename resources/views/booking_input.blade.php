@@ -104,7 +104,7 @@
                     @enderror
                     </div>
                   </div>
-                    Comments:<textarea name="comments" class="form-control" rows="5">{{ old('comments') }}</textarea><br>
+                    Comment:<textarea name="comment" class="form-control" rows="5">{{ old('comment') }}</textarea><br>
                   <div class="row">
                     <div class="col d-flex justify-content-center">
                       <button type="submit" name="return" class="btn btn-primary mt-3 mr-5 col-3" value="back">Return</button>

@@ -37,7 +37,7 @@ class Email extends Mailable
         $last_name  = $this->input['last_name'];
         $tel        = $this->input['tel'];
         $email      = $this->input['email'];
-        $comments   = $this->input['comments'];
+        $comment   = $this->input['comment'];
 
         return $this->view('emails.email')
             ->from('test@example.com')
@@ -50,7 +50,7 @@ class Email extends Mailable
                 'last_name'  => $last_name,
                 'tel'        => $tel,
                 'email'      => $email,
-                'comments'   => $comments,
+                'comment'   => $comment,
             ]);
     }
 }

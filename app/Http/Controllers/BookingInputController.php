@@ -31,8 +31,8 @@ class BookingInputController extends Controller
             'first_name' => 'required|string:max255',
             'last_name'  => 'required|string:max255',
             'tel'        => 'required|regex:/^([0-9\s\-\+\(\)]*)$/|min:10',
-            'email'      => 'required',
-            'comments'   => 'nullable|max:255',
+            'email'      => 'required|unique:bookings',
+            'comment'   => 'nullable|max:255',
         ];
 
         $this->validate($request, $rules);
@@ -50,7 +50,7 @@ class BookingInputController extends Controller
                     'last_name'        => $request->input('last_name'),
                     'tel'              => $request->input('tel'),
                     'email'            => $request->input('email'),
-                    'comments'         => $request->input('comments'),
+                    'comment'          => $request->input('comment'),
                 ]
             );
 

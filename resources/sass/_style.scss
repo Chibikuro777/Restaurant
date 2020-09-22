@@ -6,7 +6,7 @@
 .body-container{
     height: 100vh;
     width: 100vw;
-    background-image: url('../image/IMG_0938_ok.jpg');
+    background-image: url('../../public/images/background.jpg');
     background-size: cover;
 }
 nav li{
@@ -50,5 +50,11 @@ table{
     font-size: 80px;
     color: beige;
 }
+
+.booking:hover{
+    background-color: grey;
+}
+
+
 
 

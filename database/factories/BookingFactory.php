@@ -14,6 +14,6 @@ $factory->define(App\Booking::class, function (Faker $faker) {
         'last_name'  => $faker->lastName,
         'tel'        => $faker->phoneNumber,
         'email'      => $faker->email,
-        'comments'   => $faker->sentence,
+        'comment'    => $faker->sentence,
     ];
 });

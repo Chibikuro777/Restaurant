@@ -74,8 +74,8 @@
                       <input type="hidden" name="email" class="form-control" value="{{ old('email', $input['email'])}}">
                     </div>
                   </div>
-                    <span class="mr-5">Comments:</span>{{ $input['comments'] }}
-                    <input type="hidden" name="comments" class="form-control" value="{{ old('comments', $input['comments'])}}">
+                    <span class="mr-5">Comment:</span>{{ $input['comment'] }}
+                    <input type="hidden" name="comment" class="form-control" value="{{ old('comment', $input['comment'])}}">
                   <div class="row">
                     <div class="d-flex justify-content-center col">
                       <button type="submit" name="action" class="btn btn-primary mt-3 mr-5 col-3" value="return">Return</button>
