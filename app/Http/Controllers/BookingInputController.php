@@ -32,13 +32,26 @@ class BookingInputController extends Controller
             'last_name'  => 'required|string:max255',
             'tel'        => 'required|regex:/^([0-9\s\-\+\(\)]*)$/|min:10',
             'email'      => 'required|unique:bookings',
-            'comment'   => 'nullable|max:255',
+            'comment'    => 'nullable|max:255',
         ];
 
         $this->validate($request, $rules);
 
         if ($request->input('submit') === 'confirm') {
-            $request->flash(); //sessionに$requestデータをいれる
+            // $request->flash(); //sessionに$requestデータをいれる
+
+            return view('booking_confirm', compact('input'));
+        }
+    }
+
+    public function send(Request $request)
+    {
+        $action = $request->input('action', 'back');
+        $admin  = 'sanae.kawasaka@gmail.com';
+        $input  = $request->all();
+
+        //submitボタン押下でDBに保存
+        if ($action === 'submit') {
 
             DB::table('bookings')->insert(
                 [
@@ -54,19 +67,11 @@ class BookingInputController extends Controller
                 ]
             );
 
-            return view('booking_confirm', compact('input'));
-        }
-    }
-
-    public function send(Request $request)
-    {
-        $action = $request->input('action', 'back');
-        $admin  = 'sanae.kawasaka@gmail.com';
-        $input  = $request->all();
-
-        if ($action === 'submit') {
             Mail::to($request->input('email'))->send(new Email($input));
             Mail::to($admin)->send(new EmailToAdmin($input));
+
+            //多重送信を防止のためトークンを再発行
+            $request->session()->regenerateToken();
             return view('booking_thanks');
         } else {
             return redirect()->action('BookingInputController@back')->withInput(); //データ保持したまま確認画面で戻るボタン押下でbooking_inputに遷移
@@ -76,5 +81,10 @@ class BookingInputController extends Controller
     public function back()
     {
         return view('booking_input');
+    }
+
+    public function thanks()
+    {
+        return view('booking_thanks');
     }
 }

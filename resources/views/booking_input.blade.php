@@ -11,7 +11,6 @@
         <link href="{{ asset('css/app.css') }}" rel="stylesheet">
         <link rel="stylesheet" href="">
     <title>{{ config('app.name') }}</title>
-
     </head>
 <body>
     <nav class="navbar navbar-dark bg-dark navbar-expand-lg">

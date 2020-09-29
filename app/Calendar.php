@@ -24,13 +24,13 @@ class Calendar extends Model
         $week .= str_repeat('<td></td>', $day_of_week);
 
         for ($day = 1; $day <= $days_in_month; $day++, $day_of_week++) {
-            $date = self::getYm() . '-' . $day;
-            if (Carbon::now()->format('Y-m-j') === $date) {
-                $week .= '<td class="today booking">' . $day . '<a href="./bookingInput"><div class="d-flex justify-content-center align-middle"><span> Choose';
+            $date = $day  . '/' . self::getYm();
+            if (Carbon::now()->format('d/m/Y') === $date) {
+                $week .= '<td class="today booking">' . $day . '<a href="' . url('bookingInput') . '"><div class="d-flex justify-content-center align-middle"><span> Choose';
             } else {
-                $week .= '<td class="booking">' . $day . '<a href="./bookingInput"><div class="d-flex justify-content-center align-middle"><span> Choose';
+                $week .= '<td class="booking">' . $day . '<a href="' . url('bookingInput') . '"><div class="d-flex justify-content-center align-middle"><span> Choose';
             }
-            $week .= '</span></div></></td>';
+            $week .= '</span></div></a></td>';
 
             // 週の終わり、または月末
             if (($day_of_week % 7 === 6) || ($day === $days_in_month)) {
@@ -51,7 +51,7 @@ class Calendar extends Model
      */
     public static function getMonth()
     {
-        return Carbon::parse(self::getYm_firstday())->format('Y年n月');
+        return Carbon::parse(self::getYm_firstday())->format('M Y');
     }
 
     /**
@@ -61,7 +61,7 @@ class Calendar extends Model
      */
     public static function getPrev()
     {
-        return Carbon::parse(self::getYm_firstday())->subMonthsNoOverflow()->format('Y-m');
+        return Carbon::parse(self::getYm_firstday())->subMonthsNoOverflow()->format('m/Y');
     }
 
     /**
@@ -71,7 +71,7 @@ class Calendar extends Model
      */
     public static function getNext()
     {
-        return Carbon::parse(self::getYm_firstday())->addMonthNoOverflow()->format('Y-m');
+        return Carbon::parse(self::getYm_firstday())->addMonthNoOverflow()->format('m/Y');
     }
 
     /**
@@ -84,7 +84,7 @@ class Calendar extends Model
         if (isset($_GET['ym'])) {
             return $_GET['ym'];
         }
-        return Carbon::now()->format('Y-m');
+        return Carbon::now()->format('m/Y');
     }
 
     /**
@@ -94,6 +94,6 @@ class Calendar extends Model
      */
     private static function getYm_firstday()
     {
-        return self::getYm() . '-01';
+        return '01/' . self::getYm();
     }
 }
