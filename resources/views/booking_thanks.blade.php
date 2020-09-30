@@ -34,7 +34,7 @@
           </nav>
 
           <div class="container">
-            <h1 class="mt-5 mb-4 title-color">Thank you for your Booking!</h1>
+            <h1 class="mt-5 mb-4 title-color text-center">Thank you for your Booking!</h1>
             <p>Your booking has been made successfully!</p>
 
             <a href="./" class="btn btn-primary"> Back to Top</a>

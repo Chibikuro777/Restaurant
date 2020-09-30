@@ -10,11 +10,13 @@ use DB;
 
 class BookingInputController extends Controller
 {
+    //デフォルト画面
     public function index()
     {
         return view('booking_input');
     }
 
+    //入力画面でのバリデーションと確認、戻るボタン押下時
     public function post(Request $request)
     {
         $input = $request->all(); //$requestデータ全てを$inputへ代入
@@ -37,6 +39,7 @@ class BookingInputController extends Controller
 
         $this->validate($request, $rules);
 
+
         if ($request->input('submit') === 'confirm') {
             // $request->flash(); //sessionに$requestデータをいれる
 
@@ -44,6 +47,7 @@ class BookingInputController extends Controller
         }
     }
 
+    //確認画面で送信か戻るボタン押下時
     public function send(Request $request)
     {
         $action = $request->input('action', 'back');
@@ -78,11 +82,13 @@ class BookingInputController extends Controller
         }
     }
 
+    //確認画面で戻るボタン押下時
     public function back()
     {
         return view('booking_input');
     }
 
+    //直だたきで完了画面遷移時
     public function thanks()
     {
         return view('booking_thanks');

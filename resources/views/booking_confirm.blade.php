@@ -34,7 +34,7 @@
           </nav>
 
           <div class="container">
-            <h1 class="mt-5 mb-4 title-color">Booking Confirmation Page</h1>
+            <h1 class="mt-5 mb-4 title-color text-center">Booking Confirmation Page</h1>
             
           <form action="{{ route('restaurant.booking_thanks') }}" method="POST">
               @csrf
