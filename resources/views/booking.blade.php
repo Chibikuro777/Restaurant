@@ -35,7 +35,7 @@
           </nav>
 
           <div class="container">
-            <h1 class="mt-5 mb-4 title-color">Booking Page</h1>
+            <h1 class="mt-5 mb-4 title-color text-center">Booking Page</h1>
             <caption>
               <a href="?ym={{ $prev }}">&lt;</a>
                 <span class="month">{{ $month }}</span>

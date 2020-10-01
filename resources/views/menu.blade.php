@@ -34,7 +34,7 @@
         </nav>
 
         <div class="container">
-          <h1 class="mt-5 mb-4 title-color">Menu</h1>
+          <h1 class="mt-5 mb-4 title-color text-center">Menu</h1>
             <div class="p-3 mb-2 bg-primary text-white">Ramen Menu</div>
             <div class="row row-cols-1 row-cols-md-3">
               <div class="col mb-4">

@@ -33,21 +33,53 @@
           </nav>
 
           <div class="container">
-            <h1 class="mt-5 mb-4 title-color">Contact</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas doloribus quam aliquid aut, quos sint veniam animi distinctio quis vitae dolores obcaecati architecto error ut, porro exercitationem? Quasi, atque dicta.
-            Porro, incidunt quam dolores, eveniet ipsam minus nostrum nesciunt aliquid quibusdam consequuntur sint facere, veritatis labore modi. Doloribus ipsam repellat asperiores error voluptatum ipsa, quaerat sequi perferendis cumque, deserunt quas!
-            Voluptatibus illum odio fuga eius provident placeat optio aspernatur obcaecati est saepe, similique quas dignissimos corrupti, nostrum voluptates, nesciunt sit perferendis tenetur repellendus autem laboriosam! Ipsam obcaecati quod sit voluptatem!
-            Explicabo fugit, aliquam ab id ea doloribus distinctio blanditiis voluptas quia. Corporis dignissimos fugit quas iusto, dicta quo laudantium iure dolore labore quos, facilis eligendi minus praesentium numquam, nesciunt reiciendis?
-            Neque ex nisi culpa eum, adipisci voluptas quos hic. Natus exercitationem sunt accusantium expedita doloribus explicabo reiciendis fugiat veniam eveniet beatae, doloremque corporis excepturi maxime sequi molestias laborum dignissimos commodi!
-            Iusto sit fugiat laborum, recusandae laudantium quis dolore ipsam maiores accusamus autem incidunt voluptatibus quisquam, in minima modi porro temporibus mollitia optio ut similique. Voluptatem, necessitatibus architecto? Error, officiis maxime.
-            Praesentium reprehenderit architecto dolores perspiciatis vitae fugiat magnam, tempora, id optio deleniti libero dolore quos ducimus quibusdam voluptatum repudiandae laborum, voluptates impedit nihil neque. Soluta voluptatum omnis iste ipsam quo.
-            Magnam pariatur asperiores ad hic voluptatibus exercitationem repudiandae quas dolore, debitis cupiditate quaerat. Qui veritatis, dolorem blanditiis corrupti placeat quod in a aperiam nam eum maxime ipsa quas neque consequuntur?
-            Reprehenderit harum optio voluptatem, fuga magnam alias. Ullam, beatae amet? Laborum beatae consequuntur consectetur officiis qui quis nostrum possimus placeat, mollitia sit dolorum molestiae laudantium voluptatibus nisi dicta. Nostrum, suscipit.
-            Dolor placeat ipsum, facere debitis repellendus aliquid, consectetur perspiciatis mollitia fugit iste iusto autem eaque deleniti error velit. Earum, praesentium sint voluptatum quibusdam aperiam sit. Laudantium rerum molestias consectetur quasi.</p>
+            <h1 class="mt-5 mb-4 title-color text-center">Contact Us</h1>
+            <article>
+              <form action="" method="POST" class="needs-validation">
+              @csrf
+              <div class="form-group">
+                <div class="row">
+                  <div class="col">
+                  <label for="first_name">First Name:</label><input type="text" name="first_name" class="form-control @error('first_name') is-invalid @enderror" value="{{ old('first_name') }}" placeholder="First Name">
+                  @error('first_name')
+                    <div class="invalid-feedback">{{ $message }}</div>
+                  @enderror
+                  </div>
+                  <div class="col">
+                <label for="last_name">Last Name:</label><input type="text" name="last_name" class="form-control @error('last_name') is-invalid @enderror" value="{{ old('last_name') }}" Placeholder="Last Name">
+                  @error('last_name')
+                    <div class="invalid-feedback">{{ $message }}</div>
+                  @enderror
+                  </div>
+                </div>
+                  <div class="row">
+                    <div class="col">
+                      <label for="">Tel#:</label><input type="text" name="tel" class="form-control @error('tel') is-invalid @enderror" value="{{ old('tel') }}" placeholder="01 23 45 67 89">
+                      @error('tel')
+                        <div class="invalid-feedback">{{ $message }}</div>
+                      @enderror
+                    </div>
+                    <div class="col">
+                      <label for="">Email:</label><input type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" placeholder="email.address@example.fr">
+                    @error('email')
+                      <div class="invalid-feedback">{{ $message }}</div>
+                    @enderror
+                    </div>
+                  </div>
+                    Enquery:<textarea name="enquery" class="form-control" rows="5">{{ old('enquery') }}</textarea><br>
+                  <div class="row">
+                    <div class="col d-flex justify-content-center">
+                      <button type="submit" name="submit" class="btn btn-primary mt-3 col-12" value="confirm">Confirm</button>
+                    </div>
+                </div>
+            </form>
+            </article>
 
-            <aside class="easy-contact">
+            <aside>
               <p>TEL: ○○○-○○○○-○○○○</p>
-              <p>営業時間: ○○:○○~○○:○○</p>
+              <p>Open: ○○:○○~○○:○○</p>
+              <p>MAP: </p>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d44994.27278371845!2d5.680523!3d45.1842207!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x478af4f4b38dff7d%3A0xdd66c42bbf04a627!2sMus%C3%A9e%20de%20Grenoble!5e0!3m2!1sfr!2sjp!4v1601459976596!5m2!1sfr!2sjp" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
             </aside>
           </div>
     </body>

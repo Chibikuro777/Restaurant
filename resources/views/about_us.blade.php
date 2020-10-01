@@ -36,7 +36,7 @@
           </nav>
 
           <div class="container">
-            <h1 class="mt-5 mb-4 title-color">Introduction about Hoque's Restaurant</h1>
+            <h1 class="mt-5 mb-4 title-color text-center">Introduction about Hoque's Restaurant</h1>
             <p>私たちのレストランについて。</p>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas doloribus quam aliquid aut, quos sint veniam animi distinctio quis vitae dolores obcaecati architecto error ut, porro exercitationem? Quasi, atque dicta.
             Porro, incidunt quam dolores, eveniet ipsam minus nostrum nesciunt aliquid quibusdam consequuntur sint facere, veritatis labore modi. Doloribus ipsam repellat asperiores error voluptatum ipsa, quaerat sequi perferendis cumque, deserunt quas!

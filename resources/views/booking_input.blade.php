@@ -1,6 +1,5 @@
 <?php
   use Carbon\Carbon;
-
 ?>
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
@@ -37,7 +36,7 @@
           </nav>
 
           <div class="container">
-            <h1 class="mt-5 mb-4 title-color">Booking Page</h1>
+            <h1 class="mt-5 mb-4 title-color text-center">Booking Page</h1>
           <form action="{{ route('restaurant.booking_confirm') }}" method="POST" class="needs-validation">
               @csrf
               <div class="form-group">
@@ -77,7 +76,7 @@
                 </div>
                 <div class="row">
                   <div class="col">
-                  <label for="first_name">First Name:</label><input type="text" name="first_name" class="form-control @error('first_name') is-invalid @enderror" value="{{ old('first_name') }}" placeholder="First Name">
+                  <label for="first_name">First Name:</label><input type="text" name="first_name" class="form-control mb-2 @error('first_name') is-invalid @enderror" value="{{ old('first_name') }}" placeholder="First Name">
                   @error('first_name')
                     <div class="invalid-feedback">{{ $message }}</div>
                   @enderror
@@ -91,7 +90,7 @@
                 </div>
                   <div class="row">
                     <div class="col">
-                      <label for="">Tel#:</label><input type="text" name="tel" class="form-control @error('tel') is-invalid @enderror" value="{{ old('tel') }}" placeholder="01 23 45 67 89">
+                      <label for="">Tel#:</label><input type="text" name="tel" class="form-control mb-2 @error('tel') is-invalid @enderror" value="{{ old('tel') }}" placeholder="01 23 45 67 89">
                       @error('tel')
                         <div class="invalid-feedback">{{ $message }}</div>
                       @enderror
@@ -103,7 +102,7 @@
                     @enderror
                     </div>
                   </div>
-                    Comment:<textarea name="comment" class="form-control" rows="5">{{ old('comment') }}</textarea><br>
+                    <label class="mb-2">Comment: </label><textarea name="comment" class="form-control" rows="5">{{ old('comment') }}</textarea><br>
                   <div class="row">
                     <div class="col d-flex justify-content-center">
                       <button type="submit" name="return" class="btn btn-primary mt-3 mr-5 col-3" value="back">Return</button>
