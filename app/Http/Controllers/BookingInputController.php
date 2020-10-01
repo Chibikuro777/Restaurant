@@ -94,4 +94,9 @@ class BookingInputController extends Controller
     {
         return view('booking_thanks');
     }
+
+    public function error()
+    {
+        return view('error');
+    }
 }

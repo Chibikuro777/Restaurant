@@ -24,11 +24,16 @@ class Calendar extends Model
         $week .= str_repeat('<td></td>', $day_of_week);
 
         for ($day = 1; $day <= $days_in_month; $day++, $day_of_week++) {
+            if ($day < 10) {
+                $day = 0 . $day;
+            } else {
+                $day;
+            }
             $date = $day  . '/' . self::getYm();
             if (Carbon::now()->format('d/m/Y') === $date) {
-                $week .= '<td class="today booking">' . $day . '<a href="' . route('restaurant.booking_input', [ 'date' => $date ]) . '"><div class="d-flex justify-content-center align-middle"><span> Choose';
+                $week .= '<td class="today booking">' . $day . '<a href="' . route('restaurant.booking_input', ['date' => $date]) . '"><div class="d-flex justify-content-center align-middle"><span> Choose';
             } else {
-                $week .= '<td class="booking">' . $day . '<a href="' . route('restaurant.booking_input', [ 'date' => $date ]) . '"><div class="d-flex justify-content-center align-middle"><span> Choose';
+                $week .= '<td class="booking">' . $day . '<a href="' . route('restaurant.booking_input', ['date' => $date]) . '"><div class="d-flex justify-content-center align-middle"><span> Choose';
             }
             $week .= '</span></div></a></td>';
 

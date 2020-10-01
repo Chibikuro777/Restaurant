@@ -35,3 +35,6 @@ Route::get('/bookingThanks', 'BookingInputController@thanks');
 Route::post('/bookingInput', 'BookingInputController@back')->name('restaurant.booking_input');
 Route::post('/bookingConfirm', 'BookingInputController@post')->name('restaurant.booking_confirm');
 Route::post('/bookingThanks', 'BookingInputController@send')->name('restaurant.booking_thanks');
+
+//直だたきの場合、エラーページを表示
+Route::get('/bookingConfirm', 'BookingInputController@error');
