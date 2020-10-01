@@ -2,17 +2,19 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use DB;
+use Mail;
+use Carbon\Carbon;
 use App\Mail\Email;
 use App\Mail\EmailToAdmin;
-use Mail;
-use DB;
+use Illuminate\Http\Request;
 
 class BookingInputController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
-        return view('booking_input');
+        $date = $request->date ?? Carbon::now()->format('d/m/Y');
+        return view('booking_input', compact('date'));
     }
 
     public function post(Request $request)

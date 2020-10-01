@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\Calendar;
 
 class CalendarController extends Controller
@@ -15,10 +14,5 @@ class CalendarController extends Controller
             'prev'          => Calendar::getPrev(),
             'next'          => Calendar::getNext(),
         ]);
-    }
-
-    public function booking_input()
-    {
-        return view('booking_input');
     }
 }
