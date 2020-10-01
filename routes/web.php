@@ -25,10 +25,9 @@ Route::get('/contact', 'RestaurantController@contact')->name('restaurant.contact
 
 //カレンダーページの遷移
 Route::get('/booking', 'CalendarController@index')->name('restaurant.booking');
-Route::get('/bookingInput', 'CalendarController@booking_input');
 
 //URL直だたきの場合の遷移
-Route::get('/bookingInput', 'BookingInputController@index');
+Route::get('/bookingInput', 'BookingInputController@index')->name('restaurant.booking_input');
 Route::get('/bookingConfirm', 'BookingInputController@back');
 Route::get('/bookingThanks', 'BookingInputController@thanks');
 

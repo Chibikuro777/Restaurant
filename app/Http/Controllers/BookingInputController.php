@@ -2,18 +2,19 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use DB;
+use Mail;
+use Carbon\Carbon;
 use App\Mail\Email;
 use App\Mail\EmailToAdmin;
-use Mail;
-use DB;
+use Illuminate\Http\Request;
 
 class BookingInputController extends Controller
 {
-    //デフォルト画面
-    public function index()
+    public function index(Request $request)
     {
-        return view('booking_input');
+        $date = $request->date ?? Carbon::now()->format('d/m/Y');
+        return view('booking_input', compact('date'));
     }
 
     //入力画面でのバリデーションと確認、戻るボタン押下時
