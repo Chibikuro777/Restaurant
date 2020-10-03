@@ -10963,9 +10963,3 @@ table {
   background-color: grey;
 }
 
-@media screen and (max-width: 1000px) {
-  .navbar-nav {
-    display: block;
-  }
-}
-

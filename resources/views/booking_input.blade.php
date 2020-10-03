@@ -8,7 +8,6 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-        <link rel="stylesheet" href="">
     <title>{{ config('app.name') }}</title>
     </head>
 <body>
@@ -36,13 +35,16 @@
           </nav>
 
           <div class="container">
-            <h1 class="mt-5 mb-4 title-color text-center">Booking Page</h1>
+            <div class="mt-5 mb-4">
+              <h1 class="text-center title-color">Booking Page</h1>
+            <h3 class="text-right text-danger">{{ $vacancy }}Table left</h3>
+            </div>
           <form action="{{ route('restaurant.booking_confirm') }}" method="POST" class="needs-validation">
               @csrf
               <div class="form-group">
                 <div class="form-row">
                   <div class="form-group col">
-                    <label for="date">Date:</label><input type="text" name="date" value="{{ old('date', $date) }}" class="form-control">
+                    <label for="date">Date:</label><input type="text" name="date" value="{{ old('date', $date) }}" class="form-control display-table-left">
                   </div>
                   <div class="form-group col">
                     <label for="time">Time:</label><input type="time" value="19:00" name="time" class="form-control" value="{{ old('time') }}"><br>
@@ -70,7 +72,6 @@
                         <option value="18">18</option>
                         <option value="19">19</option>
                         <option value="20">20</option>
-                        <option value="Larger party">Larger party</option>
                       </select><br>
                   </div>
                 </div>

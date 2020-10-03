@@ -38,3 +38,9 @@ Route::post('/bookingThanks', 'BookingInputController@send')->name('restaurant.b
 
 //直だたきの場合、エラーページを表示
 Route::get('/bookingConfirm', 'BookingInputController@error');
+
+//テーブル残数をカウント
+Route::get('/bookingInput', 'BookingInputController@vacancy');
+
+//テーブル残数が10以下の時の遷移先
+Route::get('/tableFew', 'BookingInputController@table_few');
