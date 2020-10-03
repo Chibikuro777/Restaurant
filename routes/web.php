@@ -27,8 +27,6 @@ Route::get('/contact', 'RestaurantController@contact')->name('restaurant.contact
 Route::get('/booking', 'CalendarController@index')->name('restaurant.booking');
 
 //URL直だたきの場合の遷移
-Route::get('/bookingInput', 'BookingInputController@index')->name('restaurant.booking_input');
-Route::get('/bookingConfirm', 'BookingInputController@back');
 Route::get('/bookingThanks', 'BookingInputController@thanks');
 
 //入力内容を保持したまま遷移
@@ -41,6 +39,3 @@ Route::get('/bookingConfirm', 'BookingInputController@error');
 
 //テーブル残数をカウント
 Route::get('/bookingInput', 'BookingInputController@vacancy');
-
-//テーブル残数が10以下の時の遷移先
-Route::get('/tableFew', 'BookingInputController@table_few');

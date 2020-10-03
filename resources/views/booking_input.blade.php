@@ -8,6 +8,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+        {{-- <script src="{{ asset('/js/display_table_left.js') }}"></script> --}}
     <title>{{ config('app.name') }}</title>
     </head>
 <body>
@@ -44,7 +45,7 @@
               <div class="form-group">
                 <div class="form-row">
                   <div class="form-group col">
-                    <label for="date">Date:</label><input type="text" name="date" value="{{ old('date', $date) }}" class="form-control display-table-left">
+                    <label for="date">Date:</label><input type="text" name="date" value="{{ old('date', $date) }}" class="form-control" readonly>
                   </div>
                   <div class="form-group col">
                     <label for="time">Time:</label><input type="time" value="19:00" name="time" class="form-control" value="{{ old('time') }}"><br>

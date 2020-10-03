@@ -102,16 +102,20 @@ class BookingInputController extends Controller
 
     public function vacancy(Request $request)
     {
-        $full = 100;
+        $full = 50;
         //クリックした日付を取得
         $date   = $request->date ?? Carbon::now()->format('d/m/Y');
         //DBのdateカラムがクリックした日付と合致するものを取得し、その中のpeopleカラムの合計を取得
         $vacancy = DB::table('bookings')->where('date', $date)->select('people')->sum('people');
         if ($vacancy == 0) {
             $vacancy = $full . " ";
-        } elseif ($vacancy > 100) {
+        } elseif ($vacancy > 50) {
             $vacancy = 0 . " ";
-        } elseif ($vacancy >= 90) {
+            return view('not_available', [
+                'date'    => $date,
+                'vacancy' => $vacancy,
+            ]);
+        } elseif ($vacancy >= 40) {
             $vacancy = "Few ";
             return view('table_few');
         } else {
@@ -119,7 +123,7 @@ class BookingInputController extends Controller
         }
 
         return view('booking_input', [
-            'date'   => $date,
+            'date'    => $date,
             'vacancy' => $vacancy,
         ]);
     }
