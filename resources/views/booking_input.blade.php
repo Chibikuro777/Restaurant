@@ -45,7 +45,8 @@
               <div class="form-group">
                 <div class="form-row">
                   <div class="form-group col">
-                    <label for="date">Date:</label><input type="text" name="date" value="{{ old('date', $date) }}" class="form-control" readonly>
+                    <label for="date">Date:</label><input type="text" name="date" value="{{ old('date', $date) }}" class="form-control" disabled>
+                    <input type="hidden" name="date" value="{{ old('date', $date) }}" class="form-control">
                   </div>
                   <div class="form-group col">
                     <label for="time">Time:</label><input type="time" value="19:00" name="time" class="form-control" value="{{ old('time') }}"><br>

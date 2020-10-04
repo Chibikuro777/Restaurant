@@ -13,7 +13,7 @@ class BookingInputController extends Controller
 {
     public function index(Request $request)
     {
-        $date = $request->date ?? Carbon::now()->format('d/m/Y');
+        $date = $request->date ?? Carbon::now()->format('d M Y');
         return view('booking_input', compact('date'));
     }
 
@@ -28,7 +28,7 @@ class BookingInputController extends Controller
         }
 
         $rules = [
-            'date'       => 'required|date_format:d/m/Y',
+            'date'       => 'required|date_format:d M Y',
             'time'       => 'required:numeric',
             'people'     => 'required:numeric',
             'first_name' => 'required|string:max255',
@@ -42,8 +42,6 @@ class BookingInputController extends Controller
 
 
         if ($request->input('submit') === 'confirm') {
-            // $request->flash(); //sessionに$requestデータをいれる
-
             return view('booking_confirm', compact('input'));
         }
     }
@@ -104,12 +102,12 @@ class BookingInputController extends Controller
     {
         $full = 50;
         //クリックした日付を取得
-        $date   = $request->date ?? Carbon::now()->format('d/m/Y');
+        $date   = $request->date ?? Carbon::now()->format('d M Y');
         //DBのdateカラムがクリックした日付と合致するものを取得し、その中のpeopleカラムの合計を取得
         $vacancy = DB::table('bookings')->where('date', $date)->select('people')->sum('people');
         if ($vacancy == 0) {
             $vacancy = $full . " ";
-        } elseif ($vacancy > 50) {
+        } elseif ($vacancy >= 50) {
             $vacancy = 0 . " ";
             return view('not_available', [
                 'date'    => $date,
@@ -117,7 +115,10 @@ class BookingInputController extends Controller
             ]);
         } elseif ($vacancy >= 40) {
             $vacancy = "Few ";
-            return view('table_few');
+            return view('table_few', [
+                'date'    => $date,
+                'vacancy' => $vacancy,
+            ]);
         } else {
             $vacancy = $full - $vacancy . " ";
         }

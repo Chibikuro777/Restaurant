@@ -1,6 +1,3 @@
-<?php
-  use Carbon\Carbon;
-?>
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
@@ -40,7 +37,8 @@
               <h1 class="text-center title-color">Booking Page</h1>
             <h3 class="text-right text-danger">{{ $vacancy }}Table left</h3>
             </div>
-                Sorry, The date: {{ $date }} is not available.
+
+            <div>Sorry, The date: {{ $date }} is not available.</div>
 
             <form action="{{ route('restaurant.booking') }}" method="get">
                 <div class="d-flex justify-content-center">

@@ -17,12 +17,18 @@ Route::get('/', function () {
     return view('top_page');
 });
 
+// ***********
+// サイト全体
+// ***********
 //サイトの画面遷移
 Route::get('/aboutUs', 'RestaurantController@show')->name('restaurant.about_us');
 Route::get('/menu', 'RestaurantController@menu')->name('restaurant.menu');
 Route::get('/booking', 'RestaurantController@booking')->name('restaurant.booking');
 Route::get('/contact', 'RestaurantController@contact')->name('restaurant.contact');
 
+// ***********
+// 予約画面
+// ***********
 //カレンダーページの遷移
 Route::get('/booking', 'CalendarController@index')->name('restaurant.booking');
 
@@ -39,3 +45,8 @@ Route::get('/bookingConfirm', 'BookingInputController@error');
 
 //テーブル残数をカウント
 Route::get('/bookingInput', 'BookingInputController@vacancy');
+
+// ***********
+// Contact
+// ***********
+Route::post('/contact', 'ContactController@index');

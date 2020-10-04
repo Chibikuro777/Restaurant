@@ -28,8 +28,8 @@ class Calendar extends Model
             } else {
                 $day;
             }
-            $date = $day  . '/' . self::getYm();
-            if (Carbon::now()->format('d/m/Y') === $date) {
+            $date = $day . ' ' . self::getYm();
+            if (Carbon::now()->format('d M Y') === $date) {
                 $week .= '<td class="today booking">' . $day . '<a href="' . route('restaurant.booking_input', ['date' => $date]) . '"><div class="d-flex justify-content-center align-middle"><span> Choose';
             } else {
                 $week .= '<td class="booking">' . $day . '<a href="' . route('restaurant.booking_input', ['date' => $date]) . '"><div class="d-flex justify-content-center align-middle"><span> Choose';
@@ -65,7 +65,7 @@ class Calendar extends Model
      */
     public static function getPrev()
     {
-        return Carbon::parse(self::getYm_firstday())->subMonthsNoOverflow()->format('m/Y');
+        return Carbon::parse(self::getYm_firstday())->subMonthsNoOverflow()->format('M Y');
     }
 
     /**
@@ -75,7 +75,7 @@ class Calendar extends Model
      */
     public static function getNext()
     {
-        return Carbon::parse(self::getYm_firstday())->addMonthNoOverflow()->format('m/Y');
+        return Carbon::parse(self::getYm_firstday())->addMonthNoOverflow()->format('M Y');
     }
 
     /**
@@ -88,7 +88,7 @@ class Calendar extends Model
         if (isset($_GET['ym'])) {
             return $_GET['ym'];
         }
-        return Carbon::now()->format('m/Y');
+        return Carbon::now()->format('M Y');
     }
 
     /**
@@ -98,6 +98,6 @@ class Calendar extends Model
      */
     private static function getYm_firstday()
     {
-        return '01/' . self::getYm();
+        return '01' . self::getYm();
     }
 }

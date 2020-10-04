@@ -40,13 +40,13 @@
               <div class="form-group">
                 <div class="row">
                   <div class="col">
-                  <label for="first_name">First Name:</label><input type="text" name="first_name" class="form-control mb-2" @error('first_name') is-invalid @enderror" value="{{ old('first_name') }}" placeholder="First Name">
+                  <label for="first_name">First Name:</label><input type="text" name="first_name" class="form-control @error('first_name') is-invalid @enderror" value="{{ old('first_name') }}" placeholder="First Name">
                   @error('first_name')
                     <div class="invalid-feedback">{{ $message }}</div>
                   @enderror
                   </div>
                   <div class="col">
-                <label for="last_name">Last Name:</label><input type="text" name="last_name" class="form-control" @error('last_name') is-invalid @enderror" value="{{ old('last_name') }}" Placeholder="Last Name">
+                <label for="last_name">Last Name:</label><input type="text" name="last_name" class="form-control @error('last_name') is-invalid @enderror" value="{{ old('last_name') }}" Placeholder="Last Name">
                   @error('last_name')
                     <div class="invalid-feedback">{{ $message }}</div>
                   @enderror
@@ -54,19 +54,19 @@
                 </div>
                   <div class="row">
                     <div class="col">
-                      <label for="">Tel#:</label><input type="text" name="tel" class="form-control mb-2" @error('tel') is-invalid @enderror" value="{{ old('tel') }}" placeholder="01 23 45 67 89">
+                      <label for="">Tel#:</label><input type="text" name="tel" class="form-control @error('tel') is-invalid @enderror" value="{{ old('tel') }}" placeholder="01 23 45 67 89">
                       @error('tel')
                         <div class="invalid-feedback">{{ $message }}</div>
                       @enderror
                     </div>
                     <div class="col">
-                      <label for="">Email:</label><input type="email" class="form-control" @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" placeholder="email.address@example.fr">
+                      <label for="">Email:</label><input type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" placeholder="email.address@example.fr">
                     @error('email')
                       <div class="invalid-feedback">{{ $message }}</div>
                     @enderror
                     </div>
                   </div>
-                    <label class="mb-2">Enquery: </label><textarea name="enquery" class="form-control" rows="5">{{ old('enquery') }}</textarea><br>
+                    Enquery:<textarea name="enquery" class="form-control" rows="5">{{ old('enquery') }}</textarea><br>
                   <div class="row">
                     <div class="col d-flex justify-content-center">
                       <button type="submit" name="submit" class="btn btn-primary mt-3 col-8" value="confirm">Confirm</button>
