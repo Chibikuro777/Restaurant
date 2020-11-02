@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use DB;
 
 class ContactController extends Controller
 {
@@ -35,6 +36,17 @@ class ContactController extends Controller
         if ($request->input('return') === 'back') {
             return redirect()->action('ContactController@index')->withInput();
         } else {
+            DB::table('contact')->insert([
+                'created_at' => now(),
+                'first_name' => $request->input('first_name'),
+                'last_name'  => $request->input('last_name'),
+                'tel'        => $request->input('tel'),
+                'email'      => $request->input('email'),
+                'enquiry'    => $request->input('enquiry'),
+            ]);
+
+            $request->session()->regenerateToken();
+
             return view('contact_thanks');
         }
     }
