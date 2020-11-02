@@ -41,36 +41,36 @@
               <div class="form-group">
                 <div class="form-row">
                   <div class="form-group col">
-                    <label for="date" class="mr-5">Date:</label>{{ $input['date'] }}
+                    <label for="date" class="mr-5"><span class="required-red"> *</span> Date:</label>{{ $input['date'] }}
                     <input type="hidden" name="date" class="form-control" value="{{ old('date', $input['date'])}}">
                   </div>
                   <div class="form-group col">
-                    <label for="time" class="mr-5">Time:</label>{{ $input['time'] }}
+                    <label for="time" class="mr-5"><span class="required-red"> *</span> Time:</label>{{ $input['time'] }}
                     <input type="hidden" name="time" class="form-control" value="{{ old('time', $input['time'])}}">
                   </div>
                   <div class="form-group col">
-                    <label for="people" class="mr-5">People:</label>{{ $input['people'] }}
+                    <label for="people" class="mr-5"><span class="required-red"> *</span> People:</label>{{ $input['people'] }}
                     <input type="hidden" name="people" class="form-control" value="{{ old('people', $input['people'])}}">
                       
                   </div>
                 </div>
                 <div class="row">
                   <div class="col">
-                <label for="first_name" class="mr-5">First Name:</label>{{ $input['first_name'] }}
+                <label for="first_name" class="mr-5"><span class="required-red"> *</span> First Name:</label>{{ $input['first_name'] }}
                 <input type="hidden" name="first_name" class="form-control" value="{{ old('first_name', $input['first_name'])}}">
                   </div>
                   <div class="col">
-                <label for="last_name" class="mr-5">Last Name:</label>{{ $input['last_name'] }}
+                <label for="last_name" class="mr-5"><span class="required-red"> *</span> Last Name:</label>{{ $input['last_name'] }}
                 <input type="hidden" name="last_name" class="form-control" value="{{ old('last_name', $input['last_name'])}}">
                   </div>
                 </div>
                   <div class="row">
                     <div class="col">
-                      <label for="tel" class="mr-5">Tel#:</label>{{ $input['tel'] }}
+                      <label for="tel" class="mr-5"><span class="required-red"> *</span> Tel#:</label>{{ $input['tel'] }}
                       <input type="hidden" name="tel" class="form-control" value="{{ old('tel', $input['tel'])}}">
                     </div>
                     <div class="col">
-                      <label for="email" class="mr-5">Email:</label>{{ $input['email'] }}
+                      <label for="email" class="mr-5"><span class="required-red"> *</span> Email:</label>{{ $input['email'] }}
                       <input type="hidden" name="email" class="form-control" value="{{ old('email', $input['email'])}}">
                     </div>
                   </div>

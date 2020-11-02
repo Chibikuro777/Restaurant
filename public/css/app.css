@@ -10963,3 +10963,7 @@ table {
   background-color: grey;
 }
 
+.required-red {
+  color: red;
+}
+

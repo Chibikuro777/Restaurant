@@ -50,3 +50,5 @@ Route::get('/bookingInput', 'BookingInputController@vacancy');
 // Contact
 // ***********
 Route::post('/contact', 'ContactController@index');
+Route::post('/contactConfirm', 'ContactController@post')->name('contact_confirm');
+Route::post('/contactThanks', 'ContactController@send')->name('contact_thanks');

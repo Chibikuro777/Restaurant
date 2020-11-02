@@ -33,43 +33,39 @@
           </nav>
 
           <div class="container">
-            <h1 class="mt-5 mb-4 title-color text-center">Contact Us</h1>
+            <h1 class="mt-5 mb-4 title-color text-center">Confirmation</h1>
             <article>
-              <form action="" method="POST" class="needs-validation">
+            <form action="{{ route('contact_thanks') }}" method="POST" class="needs-validation">
               @csrf
               <div class="form-group">
-                <div class="row">
-                  <div class="col">
-                  <label for="first_name">First Name:</label><input type="text" name="first_name" class="form-control @error('first_name') is-invalid @enderror" value="{{ old('first_name') }}" placeholder="First Name">
-                  @error('first_name')
-                    <div class="invalid-feedback">{{ $message }}</div>
-                  @enderror
+                  <div class="col mb-2">
+                  <label for="first_name">First Name:</label><br>
+                   <span class="form-control form-control-lg bg-info text-white"> {{ $input['first_name'] }}</span>
+                  <input type="hidden" name="first_name" class="form-control is-invalid" value="{{ $input['first_name'] }}" placeholder="First Name">
                   </div>
-                  <div class="col">
-                <label for="last_name">Last Name:</label><input type="text" name="last_name" class="form-control @error('last_name') is-invalid @enderror" value="{{ old('last_name') }}" Placeholder="Last Name">
-                  @error('last_name')
-                    <div class="invalid-feedback">{{ $message }}</div>
-                  @enderror
+                  <div class="col mb-2">
+                  <label for="last_name">Last Name:</label><br>
+                   <span class="form-control form-control-lg bg-info text-white"> {{ $input['last_name'] }}</span>
+                <input type="hidden" name="last_name" class="form-control is-invalid" value="{{ $input['last_name'] }}" Placeholder="Last Name">
                   </div>
-                </div>
-                  <div class="row">
-                    <div class="col">
-                      <label for="">Tel#:</label><input type="text" name="tel" class="form-control @error('tel') is-invalid @enderror" value="{{ old('tel') }}" placeholder="01 23 45 67 89">
-                      @error('tel')
-                        <div class="invalid-feedback">{{ $message }}</div>
-                      @enderror
+                    <div class="col mb-2">
+                      <label for="tel">Tel#:</label><br>
+                   <span class="form-control form-control-lg bg-info text-white"> {{ $input['tel'] }}</span>
+                      <input type="hidden" name="tel" class="form-control is-invalid" value="{{ $input['tel'] }}" placeholder="01 23 45 67 89">
                     </div>
-                    <div class="col">
-                      <label for="">Email:</label><input type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" placeholder="email.address@example.fr">
-                    @error('email')
-                      <div class="invalid-feedback">{{ $message }}</div>
-                    @enderror
+                    <div class="col mb-2">
+                      <label for="email">Email:</label><br>
+                   <span class="form-control form-control-lg bg-info text-white"> {{ $input['email'] }}</span>
+                      <input type="hidden" class="form-control is-invalid" name="email" value="{{ $input['email'] }}" placeholder="email.address@example.fr">
                     </div>
-                  </div>
-                    Enquery:<textarea name="enquery" class="form-control" rows="5">{{ old('enquery') }}</textarea><br>
+                    <div class="col mb-2">
+                    <label for="enquiry">Enquiry:</label><br>
+                    <textarea name="enquiry" class="form-control form-control-lg bg-info text-white" rows="8" readonly>{{ $input['enquiry'] }}</textarea>
+                    </div>
                   <div class="row">
                     <div class="col d-flex justify-content-center">
-                      <button type="submit" name="submit" class="btn btn-primary mt-3 col-8" value="confirm">Confirm</button>
+                      <button type="submit" name="return" class="btn btn-primary mt-3 col-3 mr-5" value="back">back</button>
+                      <button type="submit" name="submit" class="btn btn-primary mt-3 col-3" value="submit">Confirm</button>
                     </div>
                 </div>
             </form>
