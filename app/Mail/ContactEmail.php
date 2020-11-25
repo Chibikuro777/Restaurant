@@ -6,12 +6,10 @@ use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
-use Illuminate\Http\Request;
 
-class Email extends Mailable
+class ContactEmail extends Mailable
 {
     use Queueable, SerializesModels;
-
 
     /**
      * Create a new message instance.
@@ -30,27 +28,21 @@ class Email extends Mailable
      */
     public function build()
     {
-        $date       = $this->input['date'];
-        $time       = $this->input['time'];
-        $people     = $this->input['people'];
         $first_name = $this->input['first_name'];
         $last_name  = $this->input['last_name'];
         $tel        = $this->input['tel'];
         $email      = $this->input['email'];
-        $comment   = $this->input['comment'];
+        $enquiry    = $this->input['enquiry'];
 
-        return $this->view('emails.email')
+        return $this->view('emails.contact_email')
             ->from('test@example.com')
-            ->subject('This is a test email')
+            ->subject('Here is your enquiry')
             ->with([
-                'date'       => $date,
-                'time'       => $time,
-                'people'     => $people,
                 'first_name' => $first_name,
                 'last_name'  => $last_name,
                 'tel'        => $tel,
                 'email'      => $email,
-                'comment'    => $comment,
+                'enquiry'    => $enquiry,
             ]);
     }
 }

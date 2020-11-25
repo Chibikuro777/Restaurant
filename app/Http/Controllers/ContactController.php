@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use DB;
+use Mail;
+use App\Mail\ContactEmail;
+use App\Mail\ContactEmailToAdmin;
 
 class ContactController extends Controller
 {
@@ -33,6 +36,8 @@ class ContactController extends Controller
 
     public function send(Request $request)
     {
+        $input = $request->all();
+
         if ($request->input('return') === 'back') {
             return redirect()->action('ContactController@index')->withInput();
         } else {
@@ -44,6 +49,9 @@ class ContactController extends Controller
                 'email'      => $request->input('email'),
                 'enquiry'    => $request->input('enquiry'),
             ]);
+
+            Mail::to($request->input('email'))->send(new ContactEmail($input));
+            Mail::to('sanae.kawasaka@gmail.com')->send(new ContactEmailToAdmin($input));
 
             $request->session()->regenerateToken();
 

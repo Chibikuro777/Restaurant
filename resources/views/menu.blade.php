@@ -5,14 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-        <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+    <script src="{{ asset('/js/app.js') }}"></script>
         <title>{{ config('app.name') }}</title>
 
     </head>
     <body>
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
         <nav class="navbar navbar-dark bg-dark navbar-expand-lg">
           <a class="navbar-brand" href="./">Hoque's restaurant</a>
-            <div class="collapse navbar-collapse" id="navbarText">
+            <div class="navbar-collapse globalMenuSp" id="navbarText">
               <ul class="navbar-nav mr-auto d-flex justify-content-end">
                 <li class="nav-item active">
                   <a class="nav-link" href="./">TOP</a>
@@ -24,7 +30,7 @@
                   <a class="nav-link" href="./menu">Menu</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="./booking">Book</a>
+                  <a class="nav-link" href="./booking">Booking</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="./contact">Contact</a>
@@ -264,5 +270,25 @@
                 </div>
               </div>
         </div>
+        <aside class="easy-contact">
+          <p>TEL: ○○○-○○○○-○○○○</p>
+          <p>OPEN: 10:00~22:00</p>
+        </aside>
+
+        <i class="far fa-caret-square-up scroll-up fa-3x"></i>
+
+        <footer>
+          <div class="footer-menu-container">
+            <div class="footer-menu">
+              <p>TOP ｜</p>
+              <p>About Us ｜</p>
+              <p>Booking ｜</p>
+              <p>Contact</p>
+            </div>
+            <div class="footer-logo">
+              <p>© All rights reserved by Sanae.</p>
+            </div>
+          </div>
+        </footer>
     </body>
 </html>

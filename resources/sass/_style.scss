@@ -4,11 +4,17 @@
 }
 
 .body-container{
-    height: 100vh;
+    height: 90vh;
     width: 100vw;
     background-image: url('../../public/images/background.jpg');
     background-size: cover;
 }
+
+.booking-body-container{
+    height: 90vh;
+    width: 100vw;
+}
+
 nav li{
     list-style: none;
     margin-left: 2%;
@@ -22,6 +28,10 @@ nav ul{
     color: grey;
 }
 
+.navbar{
+    height: 10vh;
+}
+
 .title-color{
     color: rgb(16, 99, 167);
 }
@@ -30,25 +40,16 @@ table{
     width: 100%;
 }
 
-.booking-status{
+.booking-message{
     display: flex;
     justify-content: center;
 }
 
-.container{
-    height: 100vh;
-}
-
-.easy-contact{
-    display: flex;
-    flex-direction: column;
-    position: fixed;
-    bottom: 0;
-}
-
-#home-title{
+.home-title{
     font-size: 80px;
     color: beige;
+    width: 100%;
+    text-align: center;
 }
 
 .booking:hover{
@@ -59,3 +60,187 @@ table{
     color: red;
 }
 
+footer{
+    width: 100%;
+    height: 10vh;
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    z-index: 100;
+}
+
+.footer-menu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.footer-menu-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.footer-menu p, .footer-logo p, .easy-contact p{
+    margin-bottom: 0;
+}
+
+.footer-logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.easy-contact{
+    position: fixed;
+    bottom: 12%;
+    right: 2%;
+    font-weight: border;
+}
+
+.scroll-up{
+    position: fixed;
+    right: 2%;
+    bottom: 20%;
+    z-index: -100;
+    color: transparent;
+}
+
+// レスポンシブ
+@media screen and (max-width: 1000px){
+    .hamburger {
+    display : block;
+    position: absolute;
+    z-index : 3;
+    right : 2%;
+    top   : 1%;
+    width : 35px;
+    height: 35px;
+    cursor: pointer;
+    text-align: center;
+    -webkit-transition: 0.5s all;
+    -moz-transition   : 0.5s all;
+    transition        : 0.5s all;
+    }
+    .hamburger span {
+    display : block;
+    position: absolute;
+    width   : 30px;
+    height  : 2px ;
+    left    : 6px;
+    background : white;
+    }
+    .hamburger span:nth-child(1) {
+    top: 10px;
+    }
+    .hamburger span:nth-child(2) {
+    top: 20px;
+    }
+    .hamburger span:nth-child(3) {
+    top: 30px;
+    }
+
+    /* ナビ開いてる時のボタン */
+    .hamburger.active{
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+    }
+    .hamburger.active span:nth-child(1) {
+    top : 16px;
+    left: 6px;
+    background : #fff;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform   : rotate(-45deg);
+    transform        : rotate(-45deg);
+    }
+    .hamburger.active span:nth-child(2) {
+    top: 16px;
+    background : #fff;
+    -webkit-transform: rotate(45deg);
+    -moz-transform   : rotate(45deg);
+    transform        : rotate(45deg);
+    }
+    .hamburger.active span:nth-child(3) {
+    opacity: 0;
+    }
+
+    .globalMenuSp {
+    position: absolute;
+    z-index : 2;
+    top  : 0;
+    left : 0;
+    color: #fff;
+    background: rgba(0,0,0,0.7);
+    text-align: center;
+    width: 100%;
+    opacity: 0;
+    transition: opacity .6s ease, visibility .6s ease;
+    }
+
+    .globalMenuSp ul {
+    margin: 0 auto;
+    padding: 0;
+    width: 100%;
+    }
+
+    .globalMenuSp ul li {
+    list-style-type: none;
+    padding: 0;
+    width: 100%;
+    transition: .4s all;
+    }
+    .globalMenuSp ul li:last-child {
+    padding-bottom: 0;
+    }
+    .globalMenuSp ul li:hover{
+    background :#ddd;
+    }
+
+    .globalMenuSp ul li a {
+    display: block;
+    color: #fff;
+    padding: 1em 0;
+    text-decoration :none;
+    }
+
+    /* このクラスを、jQueryで付与・削除する */
+    .globalMenuSp.active {
+    opacity: 100;
+    }
+    // タイトル文字縮小
+    #home-title{
+        font-size: 50px;
+    }
+
+    .scroll-up{
+        z-index: 100;
+        color: black;
+    }
+}
+
+@media screen and (max-width: 600px){
+    // タイトル文字縮小
+    .title{
+        margin: 10%;
+    }
+
+    .home-title{
+        font-size: 30px;
+    }
+
+    .hamburger {
+    right : 3%;
+    top   : 1.5%;
+    }
+
+    .easy-contact{
+        display: none;
+    }
+
+    .scroll-up{
+        bottom: 11%;
+    }
+}

@@ -28,7 +28,7 @@ class BookingInputController extends Controller
         }
 
         $rules = [
-            'date'       => 'required|date_format:d M Y',
+            'date'       => 'required|date_format:d M Y|date|after:yesterday',
             'time'       => 'required:numeric',
             'people'     => 'required:numeric',
             'first_name' => 'required|string:max255',

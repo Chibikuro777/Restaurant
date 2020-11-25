@@ -5,13 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    <link rel="stylesheet" href="">
+    <script src="{{ asset('/js/app.js') }}"></script>
     <title>{{ config('app.name') }}</title>
 </head>
     <body>
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
         <nav class="navbar navbar-dark bg-dark navbar-expand-lg">
             <a class="navbar-brand" href="./">Hoque's restaurant</a>
-            <div class="collapse navbar-collapse" id="navbarText">
+            <div class="navbar-collapse globalMenuSp" id="navbarText">
               <ul class="navbar-nav mr-auto d-flex justify-content-end">
                 <li class="nav-item active">
                   <a class="nav-link" href="./">TOP</a>
@@ -71,5 +76,20 @@
             </form>
             </article>
           </div>
+          <footer>
+            <div class="footer-menu">
+              <p>home ｜</p>
+              <p>about ｜</p>
+              <p>service ｜</p>
+              <p>Contact Us</p>
+            </div>
+            <div class="footer-logo">
+              <p>© All rights reserved by webcampnavi.</p>
+            </div>
+            <aside class="easy-contact">
+              <p>TEL: ○○○-○○○○-○○○○</p>
+              <p>営業時間: ○○:○○~○○:○○</p>
+            </aside>
+          </footer>
     </body>
 </html>

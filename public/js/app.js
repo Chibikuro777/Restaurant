@@ -37266,6 +37266,8 @@ module.exports = function(module) {
 
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
+__webpack_require__(/*! ./hambuger_menu */ "./resources/js/hambuger_menu.js");
+
 /***/ }),
 
 /***/ "./resources/js/bootstrap.js":
@@ -37310,6 +37312,27 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 //     cluster: process.env.MIX_PUSHER_APP_CLUSTER,
 //     forceTLS: true
 // });
+
+/***/ }),
+
+/***/ "./resources/js/hambuger_menu.js":
+/*!***************************************!*\
+  !*** ./resources/js/hambuger_menu.js ***!
+  \***************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+$(function () {
+  $('.hamburger').click(function () {
+    $(this).toggleClass('active');
+
+    if ($(this).hasClass('active')) {
+      $('.globalMenuSp').addClass('active');
+    } else {
+      $('.globalMenuSp').removeClass('active');
+    }
+  });
+});
 
 /***/ }),
 
