@@ -59,20 +59,24 @@
                 </div>
             </form>
           </div>
+          <aside class="easy-contact">
+          <p>TEL: ○○○-○○○○-○○○○</p>
+          <p>OPEN: 10:00~22:00</p>
+        </aside>
+
           <footer>
+          <div class="footer-menu-container">
             <div class="footer-menu">
-              <p>home ｜</p>
-              <p>about ｜</p>
-              <p>service ｜</p>
-              <p>Contact Us</p>
+              <p>TOP ｜</p>
+              <p>About Us ｜</p>
+              <p>Menu ｜</p>
+              <p>Booking ｜</p>
+              <p>Contact</p>
             </div>
             <div class="footer-logo">
-              <p>© All rights reserved by webcampnavi.</p>
+              <p>© All rights reserved by Sanae.</p>
             </div>
-            <aside class="easy-contact">
-              <p>TEL: ○○○-○○○○-○○○○</p>
-              <p>営業時間: ○○:○○~○○:○○</p>
-            </aside>
-          </footer>
+          </div>
+    </footer>
 </body>
 </html>

@@ -10,16 +10,17 @@
 
     </head>
 <body>
-  <div class="hamburger">
-    <span></span>
-    <span></span>
-    <span></span>
-  </div>
+  <div class="booking-body-container">
+    <div class="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
     <nav class="navbar navbar-dark bg-dark navbar-expand-lg">
         <a class="navbar-brand" href="./">Hoque's Restaurant</a>
             <div class="navbar-collapse globalMenuSp" id="navbarText">
                 <ul class="navbar-nav mr-auto d-flex justify-content-end">
-                  <li class="nav-item active">
+                  <li class="nav-item">
                   <a class="nav-link" href="./">TOP</a>
                 </li>
                 <li class="nav-item">
@@ -43,66 +44,64 @@
             
           <form action="{{ route('restaurant.booking_thanks') }}" method="POST">
               @csrf
-              <div class="form-group">
-                <div class="form-row">
-                  <div class="form-group col">
+                  <div class="col">
                     <label for="date" class="mr-5"><span class="required-red"> *</span> Date:</label>{{ $input['date'] }}
-                    <input type="hidden" name="date" class="form-control" value="{{ old('date', $input['date'])}}">
+                    <input type="hidden" name="date" class="form-control-lg mb-2" value="{{ old('date', $input['date'])}}">
                   </div>
-                  <div class="form-group col">
+                  <div class="col">
                     <label for="time" class="mr-5"><span class="required-red"> *</span> Time:</label>{{ $input['time'] }}
-                    <input type="hidden" name="time" class="form-control" value="{{ old('time', $input['time'])}}">
+                    <input type="hidden" name="time" class="form-control-lg mb-2" value="{{ old('time', $input['time'])}}">
                   </div>
-                  <div class="form-group col">
+                  <div class="col">
                     <label for="people" class="mr-5"><span class="required-red"> *</span> People:</label>{{ $input['people'] }}
-                    <input type="hidden" name="people" class="form-control" value="{{ old('people', $input['people'])}}">
+                    <input type="hidden" name="people" class="form-control-lg mb-2" value="{{ old('people', $input['people'])}}">
                       
                   </div>
-                </div>
-                <div class="row">
                   <div class="col">
                 <label for="first_name" class="mr-5"><span class="required-red"> *</span> First Name:</label>{{ $input['first_name'] }}
-                <input type="hidden" name="first_name" class="form-control" value="{{ old('first_name', $input['first_name'])}}">
+                <input type="hidden" name="first_name" class="form-control-lg mb-2" value="{{ old('first_name', $input['first_name'])}}">
                   </div>
                   <div class="col">
                 <label for="last_name" class="mr-5"><span class="required-red"> *</span> Last Name:</label>{{ $input['last_name'] }}
-                <input type="hidden" name="last_name" class="form-control" value="{{ old('last_name', $input['last_name'])}}">
+                <input type="hidden" name="last_name" class="form-control-lg mb-2" value="{{ old('last_name', $input['last_name'])}}">
                   </div>
-                </div>
-                  <div class="row">
                     <div class="col">
                       <label for="tel" class="mr-5"><span class="required-red"> *</span> Tel#:</label>{{ $input['tel'] }}
-                      <input type="hidden" name="tel" class="form-control" value="{{ old('tel', $input['tel'])}}">
+                      <input type="hidden" name="tel" class="form-control-lg mb-2" value="{{ old('tel', $input['tel'])}}">
                     </div>
                     <div class="col">
                       <label for="email" class="mr-5"><span class="required-red"> *</span> Email:</label>{{ $input['email'] }}
-                      <input type="hidden" name="email" class="form-control" value="{{ old('email', $input['email'])}}">
+                      <input type="hidden" name="email" class="form-control-lg mb-2" value="{{ old('email', $input['email'])}}">
                     </div>
-                  </div>
-                    <span class="mr-5">Comment:</span>{{ $input['comment'] }}
-                    <input type="hidden" name="comment" class="form-control" value="{{ old('comment', $input['comment'])}}">
-                  <div class="row">
-                    <div class="d-flex justify-content-center col">
+                    <div class="col mb-4">
+                    <span class="mr-5">&nbsp;&nbsp;Comment:</span>{{ $input['comment'] }}
+                    <input type="hidden" name="comment" class="form-control-lg mb-2" value="{{ old('comment', $input['comment'])}}">
+                    </div>
+                    <div class="d-flex justify-content-center col button-margin button-margin-top">
                       <button type="submit" name="action" class="btn btn-primary mt-3 mr-5 col-3" value="return">Return</button>
                       <button type="submit" name="action" class="btn btn-primary mt-3 col-3" value="submit">Submit</button>
                     </div>
-                </div>
             </form>
-          </div>
+        </div>
+      </div>
+          <aside class="easy-contact">
+            <p>TEL: ○○○-○○○○-○○○○</p>
+            <p>OPEN: 10:00~22:00</p>
+          </aside>
+
           <footer>
+          <div class="footer-menu-container">
             <div class="footer-menu">
-              <p>home ｜</p>
-              <p>about ｜</p>
-              <p>service ｜</p>
-              <p>Contact Us</p>
+              <p>TOP ｜</p>
+              <p>About Us ｜</p>
+              <p>Menu ｜</p>
+              <p>Booking ｜</p>
+              <p>Contact</p>
             </div>
             <div class="footer-logo">
-              <p>© All rights reserved by webcampnavi.</p>
+              <p>© All rights reserved by Sanae.</p>
             </div>
-            <aside class="easy-contact">
-              <p>TEL: ○○○-○○○○-○○○○</p>
-              <p>営業時間: ○○:○○~○○:○○</p>
-            </aside>
-          </footer>
+          </div>
+    </footer>
 </body>
 </html>

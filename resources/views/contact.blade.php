@@ -73,7 +73,7 @@
                       <div class="invalid-feedback">{{ $message }}</div>
                     @enderror
                     </div>
-                  <div class="row">
+                  <div class="row button-margin button-margin-top">
                     <div class="col d-flex justify-content-center">
                       <button type="submit" name="submit" class="btn btn-primary mt-3 col-8" value="confirm">Confirm</button>
                     </div>
@@ -82,11 +82,17 @@
             </form>
             </article>
           </div>
+          <aside class="easy-contact">
+            <p>TEL: ○○○-○○○○-○○○○</p>
+            <p>OPEN: 10:00~22:00</p>
+          </aside>
+
           <footer>
           <div class="footer-menu-container">
             <div class="footer-menu">
               <p>TOP ｜</p>
               <p>About Us ｜</p>
+              <p>Menu ｜</p>
               <p>Booking ｜</p>
               <p>Contact</p>
             </div>
@@ -94,6 +100,6 @@
               <p>© All rights reserved by Sanae.</p>
             </div>
           </div>
-        </footer>
+    </footer>
     </body>
 </html>

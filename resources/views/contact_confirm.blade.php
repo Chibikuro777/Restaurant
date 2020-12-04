@@ -68,7 +68,7 @@
                     <textarea name="enquiry" class="form-control form-control-lg bg-info text-white" rows="8" readonly>{{ $input['enquiry'] }}</textarea>
                     </div>
                   <div class="row">
-                    <div class="col d-flex justify-content-center">
+                    <div class="col d-flex justify-content-center button-margin button-margin-top">
                       <button type="submit" name="return" class="btn btn-primary mt-3 col-3 mr-5" value="back">back</button>
                       <button type="submit" name="submit" class="btn btn-primary mt-3 col-3" value="submit">Confirm</button>
                     </div>
@@ -76,20 +76,24 @@
             </form>
             </article>
           </div>
+          <aside class="easy-contact">
+            <p>TEL: ○○○-○○○○-○○○○</p>
+            <p>OPEN: 10:00~22:00</p>
+          </aside>
+
           <footer>
+          <div class="footer-menu-container">
             <div class="footer-menu">
-              <p>home ｜</p>
-              <p>about ｜</p>
-              <p>service ｜</p>
-              <p>Contact Us</p>
+              <p>TOP ｜</p>
+              <p>About Us ｜</p>
+              <p>Menu ｜</p>
+              <p>Booking ｜</p>
+              <p>Contact</p>
             </div>
             <div class="footer-logo">
-              <p>© All rights reserved by webcampnavi.</p>
+              <p>© All rights reserved by Sanae.</p>
             </div>
-            <aside class="easy-contact">
-              <p>TEL: ○○○-○○○○-○○○○</p>
-              <p>営業時間: ○○:○○~○○:○○</p>
-            </aside>
-          </footer>
+          </div>
+    </footer>
     </body>
 </html>

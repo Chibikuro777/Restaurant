@@ -1,6 +1,9 @@
 .title{
     font-size: 70px;
-    margin-top: 20%;
+}
+
+.title-margin{
+    margin-top: 10%;
 }
 
 .body-container{
@@ -96,17 +99,22 @@ footer{
 
 .easy-contact{
     position: fixed;
-    bottom: 12%;
+    bottom: 2%;
     right: 2%;
-    font-weight: border;
+    color: white;
+    font-weight: bold;
 }
 
 .scroll-up{
-    position: fixed;
-    right: 2%;
-    bottom: 20%;
-    z-index: -100;
-    color: transparent;
+    display: none;
+}
+
+.button-margin{
+    margin-bottom: 10%;
+}
+
+.button-margin-top{
+    margin-top: 3%;
 }
 
 // レスポンシブ
@@ -176,8 +184,7 @@ footer{
     background: rgba(0,0,0,0.7);
     text-align: center;
     width: 100%;
-    opacity: 0;
-    transition: opacity .6s ease, visibility .6s ease;
+    display: none;
     }
 
     .globalMenuSp ul {
@@ -208,16 +215,11 @@ footer{
 
     /* このクラスを、jQueryで付与・削除する */
     .globalMenuSp.active {
-    opacity: 100;
+    display: block;
     }
     // タイトル文字縮小
     #home-title{
         font-size: 50px;
-    }
-
-    .scroll-up{
-        z-index: 100;
-        color: black;
     }
 }
 
@@ -241,6 +243,21 @@ footer{
     }
 
     .scroll-up{
-        bottom: 11%;
+        display: block;
+    }
+
+    .scroll-active{
+        position: fixed;
+        bottom: 2%;
+        right: 2%;
+        color: grey;
+        animation: fadeIn 0.2s ease 0.3s 1 normal;
+    }
+    .table{
+        width: 100%;
+    }
+
+    .menu-padding{
+        padding: 0 10%;
     }
 }

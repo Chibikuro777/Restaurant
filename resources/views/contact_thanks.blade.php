@@ -9,6 +9,7 @@
     <title>{{ config('app.name') }}</title>
 </head>
     <body>
+      <div class="booking-body-container">
        <div class="hamburger">
         <span></span>
         <span></span>
@@ -40,24 +41,30 @@
           <div class="container">
             <h1 class="mt-5 mb-4 title-color text-center">Contact Us</h1>
             
-            Thank you for your contact!
-            <br>
-            <a href="/contact"><button type="button" name="button" class="btn btn-primary mt-3 col-3 mr-5" value="back">back</button></a>
+            <p class="text-center">Thank you for your contact!</p>
+            <div class="row">
+                <a href="/contact" class="col d-flex justify-content-center"><button type="button" name="button" class="btn btn-primary mt-3 col-3" value="back">back</button></a>
+            </div>
           </div>
+        </div>
+          <aside class="easy-contact">
+            <p>TEL: ○○○-○○○○-○○○○</p>
+            <p>OPEN: 10:00~22:00</p>
+          </aside>
+
           <footer>
+          <div class="footer-menu-container">
             <div class="footer-menu">
-              <p>home ｜</p>
-              <p>about ｜</p>
-              <p>service ｜</p>
-              <p>Contact Us</p>
+              <p>TOP ｜</p>
+              <p>About Us ｜</p>
+              <p>Menu ｜</p>
+              <p>Booking ｜</p>
+              <p>Contact</p>
             </div>
             <div class="footer-logo">
-              <p>© All rights reserved by webcampnavi.</p>
+              <p>© All rights reserved by Sanae.</p>
             </div>
-            <aside class="easy-contact">
-              <p>TEL: ○○○-○○○○-○○○○</p>
-              <p>営業時間: ○○:○○~○○:○○</p>
-            </aside>
-          </footer>
+          </div>
+    </footer>
     </body>
 </html>

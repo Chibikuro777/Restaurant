@@ -39,7 +39,7 @@
             </div>
         </nav>
 
-        <div class="container">
+        <div class="container menu-padding">
           <h1 class="mt-5 mb-4 title-color text-center">Menu</h1>
             <div class="p-3 mb-2 bg-primary text-white">Ramen Menu</div>
             <div class="row row-cols-1 row-cols-md-3">
@@ -62,7 +62,7 @@
                 </div>
               </div>
             </div>
-            <div class="p-3 mb-2 bg-primary text-white">Sushi Menu</div>
+            <div class="p-3 mb-2 bg-primary text-white" id="scroll-button">Sushi Menu</div>
             <div class="row row-cols-1 row-cols-md-3">
               <div class="col mb-4">
                 <div class="card">
@@ -275,13 +275,14 @@
           <p>OPEN: 10:00~22:00</p>
         </aside>
 
-        <i class="far fa-caret-square-up scroll-up fa-3x"></i>
+        <i class="far fa-caret-square-up scroll-up fa-2x"></i>
 
         <footer>
           <div class="footer-menu-container">
             <div class="footer-menu">
               <p>TOP ｜</p>
               <p>About Us ｜</p>
+              <p>Menu ｜</p>
               <p>Booking ｜</p>
               <p>Contact</p>
             </div>
@@ -289,6 +290,6 @@
               <p>© All rights reserved by Sanae.</p>
             </div>
           </div>
-        </footer>
+    </footer>
     </body>
 </html>

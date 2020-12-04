@@ -74,17 +74,18 @@
           </aside>
 
     <footer>
-      <div class="footer-menu-container">
-        <div class="footer-menu">
-          <p>TOP ｜</p>
-          <p>About Us ｜</p>
-          <p>Booking ｜</p>
-          <p>Contact</p>
-        </div>
-        <div class="footer-logo">
-          <p>© All rights reserved by Sanae.</p>
-        </div>
-      </div>
+          <div class="footer-menu-container">
+            <div class="footer-menu">
+              <p>TOP ｜</p>
+              <p>About Us ｜</p>
+              <p>Menu ｜</p>
+              <p>Booking ｜</p>
+              <p>Contact</p>
+            </div>
+            <div class="footer-logo">
+              <p>© All rights reserved by Sanae.</p>
+            </div>
+          </div>
     </footer>
 </body>
 </html>

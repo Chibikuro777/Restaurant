@@ -30,9 +30,9 @@ class Calendar extends Model
             }
             $date = $day . ' ' . self::getYm();
             if (Carbon::now()->format('d M Y') === $date) {
-                $week .= '<td class="today booking">' . $day . '<a href="' . route('restaurant.booking_input', ['date' => $date]) . '"><div class="d-flex justify-content-center align-middle"><span> Choose';
+                $week .= '<td class="today booking">' . $day . '<a href="' . route('restaurant.booking_input', ['date' => $date]) . '"><div class="d-flex justify-content-center align-middle"><span> ☑️';
             } else {
-                $week .= '<td class="booking">' . $day . '<a href="' . route('restaurant.booking_input', ['date' => $date]) . '"><div class="d-flex justify-content-center align-middle"><span> Choose';
+                $week .= '<td class="booking">' . $day . '<a href="' . route('restaurant.booking_input', ['date' => $date]) . '"><div class="d-flex justify-content-center align-middle"><span> ☑️';
             }
             $week .= '</span></div></a></td>';
 

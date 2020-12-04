@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
     <script src="{{ asset('/js/app.js') }}"></script>
         <title>{{ config('app.name') }}</title>
 
@@ -64,23 +65,27 @@
             Et corrupti omnis, vero dolore nemo recusandae fugiat optio commodi facilis dicta, necessitatibus laborum magnam nihil temporibus voluptatem alias minus voluptate? Itaque nemo sit voluptas maiores, sapiente quisquam excepturi deserunt.
           </p>
         </div>
+
+        <i class="far fa-caret-square-up scroll-up fa-3x"></i>
+
         <aside class="easy-contact">
           <p>TEL: ○○○-○○○○-○○○○</p>
           <p>OPEN: 10:00~22:00</p>
         </aside>
 
     <footer>
-      <div class="footer-menu-container">
-        <div class="footer-menu">
-          <p>TOP ｜</p>
-          <p>About Us ｜</p>
-          <p>Booking ｜</p>
-          <p>Contact</p>
-        </div>
-        <div class="footer-logo">
-          <p>© All rights reserved by Sanae.</p>
-        </div>
-      </div>
+          <div class="footer-menu-container">
+            <div class="footer-menu">
+              <p>TOP ｜</p>
+              <p>About Us ｜</p>
+              <p>Menu ｜</p>
+              <p>Booking ｜</p>
+              <p>Contact</p>
+            </div>
+            <div class="footer-logo">
+              <p>© All rights reserved by Sanae.</p>
+            </div>
+          </div>
     </footer>
 </body>
 </html>

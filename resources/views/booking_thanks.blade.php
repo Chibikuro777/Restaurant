@@ -10,11 +10,12 @@
 
     </head>
 <body>
-  <div class="hamburger">
-    <span></span>
-    <span></span>
-    <span></span>
-  </div>
+  <div class="booking-body-container">
+    <div class="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
     <nav class="navbar navbar-dark bg-dark navbar-expand-lg">
         <a class="navbar-brand" href="./">Hoque's Restaurant</a>
             <div class="navbar-collapse globalMenuSp" id="navbarText">
@@ -40,24 +41,31 @@
 
           <div class="container">
             <h1 class="mt-5 mb-4 title-color text-center">Thank you for your Booking!</h1>
-            <p>Your booking has been made successfully!</p>
-
-            <a href="./" class="btn btn-primary"> Back to Top</a>
+            <p class="text-center">Your booking has been made successfully!</p>
+            <div class="row">
+                <a href="./" class="col d-flex justify-content-center"><button type="button" name="button" class="btn btn-primary mt-3 col-4" value="back">Back to Top</button></a>
+            </div>
           </div>
+        </div>
+          
+          <aside class="easy-contact">
+            <p>TEL: ○○○-○○○○-○○○○</p>
+            <p>OPEN: 10:00~22:00</p>
+          </aside>
+
           <footer>
+          <div class="footer-menu-container">
             <div class="footer-menu">
-              <p>home ｜</p>
-              <p>about ｜</p>
-              <p>service ｜</p>
-              <p>Contact Us</p>
+              <p>TOP ｜</p>
+              <p>About Us ｜</p>
+              <p>Menu ｜</p>
+              <p>Booking ｜</p>
+              <p>Contact</p>
             </div>
             <div class="footer-logo">
-              <p>© All rights reserved by webcampnavi.</p>
+              <p>© All rights reserved by Sanae.</p>
             </div>
-            <aside class="easy-contact">
-              <p>TEL: ○○○-○○○○-○○○○</p>
-              <p>営業時間: ○○:○○~○○:○○</p>
-            </aside>
-          </footer>
+          </div>
+    </footer>
 </body>
 </html>

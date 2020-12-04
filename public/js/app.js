@@ -37320,7 +37320,10 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
   !*** ./resources/js/hambuger_menu.js ***!
   \***************************************/
 /*! no static exports found */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
+
+var _require = __webpack_require__(/*! lodash */ "./node_modules/lodash/lodash.js"),
+    functionsIn = _require.functionsIn;
 
 $(function () {
   $('.hamburger').click(function () {
@@ -37332,6 +37335,17 @@ $(function () {
       $('.globalMenuSp').removeClass('active');
     }
   });
+});
+$(function () {
+  var button = $('#scroll-button').offset();
+
+  if ($(window).offset().top >= button.top) {
+    console.log('ok');
+    $('.scroll-up').addClass('scroll-active');
+    $('.scroll-up').click(function () {
+      $(window).scrollTop();
+    });
+  }
 });
 
 /***/ }),

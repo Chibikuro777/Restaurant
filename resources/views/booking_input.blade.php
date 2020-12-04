@@ -13,11 +13,11 @@
     <title>{{ config('app.name') }}</title>
     </head>
 <body>
-  <div class="hamburger">
-    <span></span>
-    <span></span>
-    <span></span>
-  </div>
+    <div class="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
     <nav class="navbar navbar-dark bg-dark navbar-expand-lg">
         <a class="navbar-brand" href="./">Hoque's Restaurant</a>
             <div class="navbar-collapse globalMenuSp" id="navbarText">
@@ -48,21 +48,19 @@
             </div>
           <form action="{{ route('restaurant.booking_confirm') }}" method="POST" class="needs-validation">
               @csrf
-              <div class="form-group">
-                <div class="form-row">
-                  <div class="form-group col">
-                    <label for="date"><span class="required-red"> *</span> Date:</label><input type="text" name="date" value="{{ old('date', $date) }}" class="form-control @error('date') is-invalid @enderror" disabled>
+                  <div class="col">
+                    <label for="date"><span class="required-red"> *</span> Date:</label><input type="text" name="date" value="{{ old('date', $date) }}" class="form-control form-control-lg mb-2 @error('date') is-invalid @enderror" disabled>
                     <input type="hidden" name="date" value="{{ old('date', $date) }}" class="form-control">
                     @error('date')
                     <div class="invalid-feedback">{{ $message }}</div>
                     @enderror
                   </div>
-                  <div class="form-group col">
-                    <label for="time"><span class="required-red"> *</span> Time:</label><input type="time" value="19:00" name="time" class="form-control" value="{{ old('time') }}"><br>
+                  <div class="col">
+                    <label for="time"><span class="required-red"> *</span> Time:</label><input type="time" value="19:00" name="time" class="form-control form-control-lg mb-2" value="{{ old('time') }}">
                   </div>
-                  <div class="form-group col">
+                  <div class="col">
                     <label for="people"><span class="required-red"> *</span> People:</label>
-                      <select name="people" id="" class="form-control" value="{{ old('people') }}">
+                      <select name="people" id="" class="form-control form-control-lg mb-2" value="{{ old('people') }}">
                         <option value="1">1</option>
                         <option value="2" selected>2</option>
                         <option value="3">3</option>
@@ -83,60 +81,63 @@
                         <option value="18">18</option>
                         <option value="19">19</option>
                         <option value="20">20</option>
-                      </select><br>
+                      </select>
                   </div>
-                </div>
-                <div class="row">
                   <div class="col">
-                  <label for="first_name"><span class="required-red"> *</span> First Name:</label><input type="text" name="first_name" class="form-control mb-2 @error('first_name') is-invalid @enderror" value="{{ old('first_name') }}" placeholder="First Name">
+                  <label for="first_name"><span class="required-red"> *</span> First Name:</label><input type="text" name="first_name" class="form-control form-control-lg mb-2 @error('first_name') is-invalid @enderror" value="{{ old('first_name') }}" placeholder="First Name">
                   @error('first_name')
                     <div class="invalid-feedback">{{ $message }}</div>
                   @enderror
                   </div>
                   <div class="col">
-                <label for="last_name"><span class="required-red"> *</span> Last Name:</label><input type="text" name="last_name" class="form-control @error('last_name') is-invalid @enderror" value="{{ old('last_name') }}" Placeholder="Last Name">
+                <label for="last_name"><span class="required-red"> *</span> Last Name:</label><input type="text" name="last_name" class="form-control form-control-lg mb-2 @error('last_name') is-invalid @enderror" value="{{ old('last_name') }}" Placeholder="Last Name">
                   @error('last_name')
                     <div class="invalid-feedback">{{ $message }}</div>
                   @enderror
                   </div>
-                </div>
-                  <div class="row">
                     <div class="col">
-                      <label for=""><span class="required-red"> *</span> Tel#:</label><input type="text" name="tel" class="form-control mb-2 @error('tel') is-invalid @enderror" value="{{ old('tel') }}" placeholder="01 23 45 67 89">
+                      <label for=""><span class="required-red"> *</span> Tel#:</label><input type="text" name="tel" class="form-control form-control-lg mb-2 @error('tel') is-invalid @enderror" value="{{ old('tel') }}" placeholder="01 23 45 67 89">
                       @error('tel')
                         <div class="invalid-feedback">{{ $message }}</div>
                       @enderror
                     </div>
                     <div class="col">
-                      <label for=""><span class="required-red"> *</span> Email:</label><input type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" placeholder="email.address@example.fr">
+                      <label for=""><span class="required-red"> *</span> Email:</label><input type="email" class="form-control form-control-lg mb-2 @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" placeholder="email.address@example.fr">
                     @error('email')
                       <div class="invalid-feedback">{{ $message }}</div>
                     @enderror
                     </div>
-                  </div>
-                    <label class="mb-2">Comment: </label><textarea name="comment" class="form-control" rows="5">{{ old('comment') }}</textarea><br>
-                  <div class="row">
-                    <div class="col d-flex justify-content-center">
-                      <button type="submit" name="return" class="btn btn-primary mt-3 mr-5 col-3" value="back">Return</button>
-                      <button type="submit" name="submit" class="btn btn-primary mt-3 col-3" value="confirm">Confirm</button>
+                    <div class="col button-margin">
+                    <label class="mb-2">Comment: </label><textarea name="comment" class="form-control form-control-lg" rows="5">{{ old('comment') }}</textarea><br>
+                    <div class="col d-flex justify-content-center button-margin-top">
+                      <button type="submit" name="return" class="btn btn-primary mr-5 col-3" value="back">Return</button>
+                      <button type="submit" name="submit" class="btn btn-primary col-3" value="confirm">Confirm</button>
                     </div>
-                </div>
+                  </div>
+
+                    </div>
+
             </form>
           </div>
+      </div>
+          <aside class="easy-contact">
+            <p>TEL: ○○○-○○○○-○○○○</p>
+            <p>OPEN: 10:00~22:00</p>
+          </aside>
+
           <footer>
+          <div class="footer-menu-container">
             <div class="footer-menu">
-              <p>home ｜</p>
-              <p>about ｜</p>
-              <p>service ｜</p>
-              <p>Contact Us</p>
+              <p>TOP ｜</p>
+              <p>About Us ｜</p>
+              <p>Menu ｜</p>
+              <p>Booking ｜</p>
+              <p>Contact</p>
             </div>
             <div class="footer-logo">
-              <p>© All rights reserved by webcampnavi.</p>
+              <p>© All rights reserved by Sanae.</p>
             </div>
-            <aside class="easy-contact">
-              <p>TEL: ○○○-○○○○-○○○○</p>
-              <p>営業時間: ○○:○○~○○:○○</p>
-            </aside>
-          </footer>
+          </div>
+    </footer>
 </body>
 </html>
