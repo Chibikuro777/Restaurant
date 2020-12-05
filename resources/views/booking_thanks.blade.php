@@ -59,11 +59,11 @@
           <footer>
           <div class="footer-menu-container">
             <div class="footer-menu">
-              <p>TOP ｜</p>
-              <p>About Us ｜</p>
-              <p>Menu ｜</p>
-              <p>Booking ｜</p>
-              <p>Contact</p>
+              <p><a href="./">TOP ｜</a></p>
+              <p><a href="/aboutUs">About Us ｜</a></p>
+              <p><a href="/menu">Menu ｜</a></p>
+              <p><a href="/booking">Booking ｜</a></p>
+              <p><a href="/contact">Contact</a></p>
             </div>
             <div class="footer-logo">
               <p>© All rights reserved by Sanae.</p>
