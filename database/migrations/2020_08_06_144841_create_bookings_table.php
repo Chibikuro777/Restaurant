@@ -14,8 +14,8 @@ class CreateBookingsTable extends Migration
     public function up()
     {
         Schema::create('bookings', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps('created_at');
+            $table->increments('id');
+            $table->timestamp('created_at');
             $table->string('date');
             $table->string('time');
             $table->integer('people');
@@ -23,7 +23,7 @@ class CreateBookingsTable extends Migration
             $table->char('last_name', 50);
             $table->string('tel');
             $table->string('email');
-            $table->string('comment');
+            $table->string('comment', 255)->nullable();
         });
     }
 

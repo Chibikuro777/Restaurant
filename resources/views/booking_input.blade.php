@@ -120,10 +120,13 @@
             </form>
           </div>
       </div>
-          <aside class="easy-contact">
-            <p>TEL: ○○○-○○○○-○○○○</p>
-            <p>OPEN: 10:00~22:00</p>
-          </aside>
+          <div class="smooth-up">
+            <i class="far fa-caret-square-up scroll-up fa-2x"></i>
+            <aside class="easy-contact">
+              <p>TEL: ○○○-○○○○-○○○○</p>
+              <p>OPEN: 10:00~22:00</p>
+            </aside>
+          </div>
 
           <footer>
           <div class="footer-menu-container">

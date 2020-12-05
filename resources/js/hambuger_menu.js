@@ -12,14 +12,23 @@ $(function () {
 });
 
 $(function () {
-    let button = $('#scroll-button').offset();
-    if ($(window).offset().top >= button.top) {
-        console.log('ok');
-        $('.scroll-up').addClass('scroll-active');
-        $('.scroll-up').click(function () {
-            $(window).scrollTop();
-        });
-    }
+    var scrollUp = $('.scroll-up');
+    scrollUp.hide();
+    //スクロールしてページトップから100に達したらボタンを表示
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 1000) {
+            scrollUp.fadeIn();
+        } else {
+            scrollUp.fadeOut();
+        }
+    });
+    //スクロールしてトップへ戻る
+    scrollUp.click(function () {
+        $('body,html').animate({
+            scrollTop: 0
+        }, 500);
+        return false;
+    });
 });
 
 

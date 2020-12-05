@@ -9,7 +9,7 @@
     <title>{{ config('app.name') }}</title>
 </head>
     <body>
-      <div class="booking-body-container">
+      <div class="contact-body-container">
        <div class="hamburger">
         <span></span>
         <span></span>
@@ -47,10 +47,14 @@
             </div>
           </div>
         </div>
-          <aside class="easy-contact">
-            <p>TEL: ○○○-○○○○-○○○○</p>
-            <p>OPEN: 10:00~22:00</p>
-          </aside>
+
+          <div class="smooth-up">
+            <i class="far fa-caret-square-up scroll-up fa-2x"></i>
+            <aside class="easy-contact">
+              <p>TEL: ○○○-○○○○-○○○○</p>
+              <p>OPEN: 10:00~22:00</p>
+            </aside>
+          </div>
 
           <footer>
           <div class="footer-menu-container">
