@@ -22,20 +22,16 @@
       <p>Enquiry: {{ $enquiry }}</p>
     </ul>
   </div>
-  <footer>
-    <div class="footer-menu">
-      <p>home ｜</p>
-      <p>about ｜</p>
-      <p>service ｜</p>
-      <p>Contact Us</p>
-    </div>
-    <div class="footer-logo">
-      <p>© All rights reserved by webcampnavi.</p>
-    </div>
-    <aside class="easy-contact">
-      <p>TEL: ○○○-○○○○-○○○○</p>
-      <p>営業時間: ○○:○○~○○:○○</p>
-    </aside>
-  </footer>
+  <footer style="text-align:center;">
+          <div class="footer-menu-container">
+            <div class="footer-logo">
+              <p>© All rights reserved by Sanae.</p>
+            </div>
+            <aside class="easy-contact">
+              <p>TEL: ○○○-○○○○-○○○○</p>
+              <p>OPEN: 10:00~22:00</p>
+            </aside>
+          </div>
+    </footer>
 </body>
 </html>

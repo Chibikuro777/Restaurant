@@ -11201,5 +11201,9 @@ iframe {
     width: 300px;
     height: 300px;
   }
+
+  .contact-body-container {
+    height: auto;
+  }
 }
 

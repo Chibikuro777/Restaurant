@@ -110,7 +110,7 @@
                     <div class="col button-margin">
                     <label class="mb-2">Comment: </label><textarea name="comment" class="form-control form-control-lg" rows="5">{{ old('comment') }}</textarea><br>
                     <div class="col d-flex justify-content-center button-margin-top">
-                      <button type="submit" name="return" class="btn btn-primary mr-5 col-3" value="back">Return</button>
+                      <button type="submit" name="return" class="btn btn-primary mr-5 col-3" value="back"><a href="./booking" class="text-white text-decoration-none">Return</a></button>
                       <button type="submit" name="submit" class="btn btn-primary col-3" value="confirm">Confirm</button>
                     </div>
                   </div>

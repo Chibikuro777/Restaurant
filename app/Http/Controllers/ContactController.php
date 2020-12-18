@@ -7,6 +7,7 @@ use DB;
 use Mail;
 use App\Mail\ContactEmail;
 use App\Mail\ContactEmailToAdmin;
+use App\Http\Requests\Contact;
 
 class ContactController extends Controller
 {
@@ -15,20 +16,11 @@ class ContactController extends Controller
         return view('contact');
     }
 
-    public function post(Request $request)
+    public function post(Contact $request)
     {
-        $rules = [
-            'first_name' => 'required|max:50',
-            'last_name'  => 'required|max:50',
-            'tel'        => 'required|max:20',
-            'email'      => 'required|max:200',
-            'enquiry'    => 'required|max:255',
-        ];
-
-        $this->validate($request, $rules);
-
         if ($request->input('submit') === 'confirm') {
-            $input = $request->all();
+
+            $input = $request->validated();
 
             return view('contact_confirm', compact('input'));
         }

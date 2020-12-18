@@ -8,6 +8,7 @@ use Carbon\Carbon;
 use App\Mail\Email;
 use App\Mail\EmailToAdmin;
 use Illuminate\Http\Request;
+use App\Http\Requests\BookingInput;
 
 class BookingInputController extends Controller
 {
@@ -18,30 +19,11 @@ class BookingInputController extends Controller
     }
 
     //入力画面でのバリデーションと確認、戻るボタン押下時
-    public function post(Request $request)
+    public function post(BookingInput $request)
     {
-        $input = $request->all(); //$requestデータ全てを$inputへ代入
+        $input = $request->validated(); //$requestデータ全てを$inputへ代入
 
-        //入力画面の戻るボタン押下でbookingページに遷移
-        if ($request->input('return') === 'back') {
-            return redirect('booking');
-        }
-
-        $rules = [
-            'date'       => 'required|date_format:d M Y|date|after:yesterday',
-            'time'       => 'required:numeric',
-            'people'     => 'required:numeric',
-            'first_name' => 'required|string:max255',
-            'last_name'  => 'required|string:max255',
-            'tel'        => 'required|regex:/^([0-9\s\-\+\(\)]*)$/|min:10',
-            'email'      => 'required|unique:bookings',
-            'comment'    => 'nullable|max:255',
-        ];
-
-        $this->validate($request, $rules);
-
-
-        if ($request->input('submit') === 'confirm') {
+        if ($request['submit'] === 'confirm') {
             return view('booking_confirm', compact('input'));
         }
     }
