@@ -38,7 +38,7 @@
                 </li>
               </ul>
             </div>
-          </nav>
+          </nav> 
         <div class="justify-content-center d-flex align-items-center title-margin">
           <div class="title m-b-md font-italic font-weight-lighter text-primary">
             <h1 class="home-title">Welcome to </h1>
