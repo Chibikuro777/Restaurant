@@ -7,6 +7,7 @@ use Faker\Generator as Faker;
 
 $factory->define(App\Booking::class, function (Faker $faker) {
     return [
+        'created_at' => $faker->date('Y-m-d H:i:s'),
         'date'       => $faker->dateTimeBetween('+1day', '+1year')->format('Y-m-d'),
         'time'       => $faker->time(),
         'people'     => $faker->numberBetween(1, 12),
