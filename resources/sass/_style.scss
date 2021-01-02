@@ -97,7 +97,7 @@ footer{
 }
 
 .booking-body-container{
-    height: 90vh;
+    height: auto;
     width: 100vw;
 }
 
@@ -137,6 +137,15 @@ iframe{
     height: 90vh;
     width: 100vw;
     }
+
+    .booking-body-container{
+    height: 90vh;
+    }
+
+    .easy-contact{
+        display: none!important;
+    }
+
 }
 
 @media screen and (max-width: 1000px){
@@ -247,11 +256,6 @@ iframe{
         font-size: 50px;
     }
 
-    .booking-body-container{
-    height: 90vh;
-    width: 100vw;
-    }
-
     .contact-body-container{
     height: auto;
     }
@@ -259,10 +263,6 @@ iframe{
     .table-few-body-container{
     height: auto;
     width: auto;
-    }
-
-    .easy-contact{
-        display: none!important;
     }
 }
 
