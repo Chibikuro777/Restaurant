@@ -9,7 +9,6 @@
     <title>{{ config('app.name') }}</title>
 </head>
     <body>
-      <div class="contact-body-container">
         <div class="hamburger">
           <span></span>
           <span></span>
@@ -83,7 +82,6 @@
               </form>
               </article>
             </div>
-          </div>
 
           <div class="smooth-up">
             <i class="far fa-caret-square-up scroll-up fa-2x"></i>

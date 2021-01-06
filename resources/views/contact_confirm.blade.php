@@ -9,7 +9,6 @@
     <title>{{ config('app.name') }}</title>
 </head>
     <body>
-      <div class="contact-body-container">
         <div class="hamburger">
           <span></span>
           <span></span>

@@ -10,7 +10,6 @@
 
     </head>
     <body>
-      <div class="booking-body-container">
         <div class="hamburger">
           <span></span>
           <span></span>
@@ -67,7 +66,6 @@
                 <p>*If you have a question, please feel free to contact us though our Contact page!</p>
               </div>
             </div>
-      </div>
           <div class="smooth-up">
             <i class="far fa-caret-square-up scroll-up fa-2x"></i>
             <aside class="easy-contact">

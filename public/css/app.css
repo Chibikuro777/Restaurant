@@ -11005,8 +11005,9 @@ footer {
   align-items: center;
 }
 
-.booking-body-container {
-  height: auto;
+.booking-body-container,
+.contact-body-container {
+  height: 90vh;
   width: 100vw;
 }
 
@@ -11169,7 +11170,8 @@ iframe {
     font-size: 50px;
   }
 
-  .contact-body-container {
+  .contact-body-container,
+  .booking-body-container {
     height: auto;
   }
 
@@ -11235,8 +11237,9 @@ iframe {
     height: 300px;
   }
 
-  .booking-body-container {
-    height: auto;
+  .booking-body-container,
+  .contact-body-container {
+    height: 90vh;
   }
 }
 
