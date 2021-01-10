@@ -1,5 +1,5 @@
 *{
-    font-size: 24px;
+    font-size: 20px;
 }
 
 .title{
@@ -11,8 +11,12 @@
 }
 
 .body-container{
-    height: 90vh;
+    height: auto;
     width: 100vw;
+}
+
+.title-layout{
+    height: 100vh;
     background-image: url('../../public/images/background.jpg');
     background-size: cover;
 }

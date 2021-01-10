@@ -21,7 +21,7 @@ Route::get('/', function () {
 // サイト全体
 // ***********
 //サイトの画面遷移
-Route::get('/aboutUs', 'RestaurantController@show')->name('restaurant.about_us');
+Route::get('/access', 'RestaurantController@show')->name('restaurant.access');
 Route::get('/menu', 'RestaurantController@menu')->name('restaurant.menu');
 Route::get('/booking', 'RestaurantController@booking')->name('restaurant.booking');
 Route::get('/contact', 'RestaurantController@contact')->name('restaurant.contact');

@@ -9,7 +9,7 @@ class RestaurantController extends Controller
 {
     public function show()
     {
-        return view('about_us');
+        return view('access');
     }
 
     public function menu()

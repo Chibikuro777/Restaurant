@@ -20,20 +20,20 @@
         <a class="navbar-brand" href="./">Hoque's Restaurant</a>
             <div class="navbar-collapse globalMenuSp" id="navbarText">
                 <ul class="navbar-nav mr-auto d-flex justify-content-end">
-                  <li class="nav-item active">
-                  <a class="nav-link" href="./">TOP</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="./aboutUs">About Us</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="./menu">Menu</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="./booking">Book</a>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./">TOP</a>
                   </li>
                   <li class="nav-item">
+                    <a class="nav-link" href="./menu">Menu</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="./booking">Booking</a>
+                    </li>
+                  <li class="nav-item">
                     <a class="nav-link" href="./contact">Contact</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./access">Access</a>
                   </li>
               </ul>
             </div>
@@ -60,10 +60,10 @@
           <div class="footer-menu-container">
             <div class="footer-menu">
               <p><a href="./">TOP ｜</a></p>
-              <p><a href="/aboutUs">About Us ｜</a></p>
               <p><a href="/menu">Menu ｜</a></p>
               <p><a href="/booking">Booking ｜</a></p>
-              <p><a href="/contact">Contact</a></p>
+              <p><a href="/contact">Contact ｜</a></p>
+              <p><a href="/access">Access</a></p>
             </div>
             <div class="footer-logo">
               <p>© All rights reserved by Sanae.</p>
