@@ -96,7 +96,7 @@
                   @enderror
                   </div>
                     <div class="col">
-                      <label for=""><span class="required-red"> *</span> Tel#:</label><input type="text" name="tel" class="form-control form-control-lg mb-2 @error('tel') is-invalid @enderror" value="{{ old('tel') }}" placeholder="01 23 45 67 89">
+                      <label for=""><span class="required-red"> *</span> Tel#:</label><input type="tel" name="tel" class="form-control form-control-lg mb-2 @error('tel') is-invalid @enderror" value="{{ old('tel') }}" placeholder="01 23 45 67 89">
                       @error('tel')
                         <div class="invalid-feedback">{{ $message }}</div>
                       @enderror

@@ -26,7 +26,7 @@ class Contact extends FormRequest
         return [
             'first_name' => 'required|max:50',
             'last_name'  => 'required|max:50',
-            'tel'        => 'required|max:20',
+            'tel'        => 'required|regex:/^([0-9\s\-\+\(\)]*)$/|min:10',
             'email'      => 'required|max:200',
             'enquiry'    => 'required|max:255',
         ];
